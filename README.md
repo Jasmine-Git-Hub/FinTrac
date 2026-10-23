@@ -4,13 +4,12 @@
 
 Built with Java and Firebase.
 
-<!-- Add screenshots: put PNGs in docs/screenshots/ and uncomment the lines below.
 <p>
-  <img src="docs/screenshots/home.png" width="230" alt="Home dashboard">
-  <img src="docs/screenshots/jar.png" width="230" alt="Shared savings jar">
-  <img src="docs/screenshots/bills.png" width="230" alt="Bills">
+  <img src="docs/screenshots/home.png" width="200" alt="Home dashboard with balance, savings in jars, unpaid bills and a spending chart">
+  <img src="docs/screenshots/jars.png" width="200" alt="Savings jars with goal progress">
+  <img src="docs/screenshots/bills.png" width="200" alt="Bills with total due and upcoming payments">
+  <img src="docs/screenshots/history.png" width="200" alt="Transaction history with weekly, monthly and yearly totals">
 </p>
--->
 
 ## Features
 

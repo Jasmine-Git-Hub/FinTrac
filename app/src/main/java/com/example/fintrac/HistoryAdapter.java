@@ -77,7 +77,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         String category = item.getCategory() != null ? item.getCategory().toLowerCase(java.util.Locale.US) : "";
         String title = item.getTitle() != null ? item.getTitle() : "";
         if (category.equals("bills") || title.startsWith("Paid Bill: ") || title.startsWith("Paid: ")) {
-            holder.ivIcon.setImageResource(R.drawable.house);
+            holder.ivIcon.setImageResource(R.drawable.bills_icon);
         } else if (category.equals("jars") || category.equals("challenges") || category.equals("savings")
                 || title.startsWith("Saved to Jar: ")) {
             holder.ivIcon.setImageResource(R.drawable.piggy);
