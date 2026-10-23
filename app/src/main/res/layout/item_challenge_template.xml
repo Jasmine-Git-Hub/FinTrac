@@ -23,7 +23,7 @@
             android:id="@+id/tv_challenge_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No-Café Week"
+            android:text="@string/no_cafe_week"
             android:textColor="@color/dark_blue"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Skip coffee shop visits for 7 days"
+            android:text="@string/no_cafe_desc"
             android:textColor="@color/gray"
             android:textSize="14sp" />
 
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="4dp"
                 android:drawableStart="@drawable/ic_calendar"
-                android:text="7 days"
+                android:text="@string/seven_days"
                 android:textColor="@color/gray"
                 android:textSize="12sp" />
 
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:drawablePadding="4dp"
                 android:drawableStart="@drawable/ic_savings"
-                android:text="Save ₱350"
+                android:text="@string/save_amount_350"
                 android:textColor="@color/gray"
                 android:textSize="12sp" />
 

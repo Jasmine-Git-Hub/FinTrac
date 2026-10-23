@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Jar Moved to Archives"
+        android:text="@string/jar_moved_to_archives"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@android:color/holo_red_dark"
@@ -43,7 +43,7 @@
         android:textSize="14sp"
         android:textColor="@color/text_secondary"
         android:gravity="center"
-        android:text="It will be permanently deleted after 30 days."
+        android:text="@string/it_will_be_permanently_deleted"
         android:layout_marginBottom="24dp" />
 
     <LinearLayout
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="8dp"
-            android:text="Dismiss"
+            android:text="@string/dismiss"
             style="@style/Widget.Material3.Button.TextButton"
             android:textColor="@color/text_secondary" />
 
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginStart="8dp"
-            android:text="View in Archives"
+            android:text="@string/view_in_archives"
             android:backgroundTint="@color/blue"
             android:textColor="@color/white" />
 

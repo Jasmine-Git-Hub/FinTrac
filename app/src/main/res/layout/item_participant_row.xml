@@ -38,7 +38,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="You"
+                    android:text="@string/you"
                     android:textColor="@android:color/white"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -47,7 +47,7 @@
                     android:id="@+id/participant_suggested"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Suggested ₱0"
+                    android:text="@string/suggested_0_2"
                     android:textColor="#E0E0E0"
                     android:textSize="12sp"
                     android:textStyle="bold" />
@@ -58,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Contributed: ₱0"
+                android:text="@string/contributed_sofia"
                 android:textColor="#B0BEC5"
                 android:textSize="12sp" />
         </LinearLayout>

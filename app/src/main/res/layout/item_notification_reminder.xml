@@ -40,7 +40,7 @@
                     android:layout_gravity="center"
                     android:src="@drawable/ic_clock"
                     app:tint="@color/warning_color"
-                    android:contentDescription="Notification Icon" />
+                    android:contentDescription="@string/cd_notif" />
             </com.google.android.material.card.MaterialCardView>
 
             <LinearLayout
@@ -108,7 +108,7 @@
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_marginEnd="4dp"
-                android:text="Accept"
+                android:text="@string/accept"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/green"
@@ -120,7 +120,7 @@
                 android:layout_height="40dp"
                 android:layout_weight="1"
                 android:layout_marginStart="4dp"
-                android:text="Decline"
+                android:text="@string/decline"
                 android:textAllCaps="false"
                 android:textColor="@color/text_primary"
                 app:backgroundTint="@color/page_background"
@@ -134,7 +134,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="12dp"
-            android:text="Dismiss"
+            android:text="@string/dismiss"
             android:textAllCaps="false"
             android:textColor="@color/text_primary"
             app:backgroundTint="@color/page_background"
@@ -151,7 +151,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="8dp"
-            android:text="Mark as read"
+            android:text="@string/mark_as_read"
             android:textAllCaps="false"
             android:textSize="14sp"
             android:textColor="@color/blue"

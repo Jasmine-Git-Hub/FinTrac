@@ -4,31 +4,31 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/home"
-        android:title="Home" />
+        android:title="@string/home" />
 
     <item
         android:id="@+id/navigation_jars"
         android:icon="@drawable/jars"
-        android:title="Jars" />
+        android:title="@string/jars" />
 
     <item
         android:id="@+id/navigation_bills"
         android:icon="@drawable/bills"
-        android:title="Bills" />
+        android:title="@string/bills" />
 
     <item
         android:id="@+id/navigation_challenges"
         android:icon="@drawable/trophy"
-        android:title="Challenges" />
+        android:title="@string/challenges" />
 
     <item
         android:id="@+id/navigation_history"
         android:icon="@drawable/history"
-        android:title="History" />
+        android:title="@string/history_title" />
 
     <item
         android:id="@+id/navigation_settings"
         android:icon="@drawable/settings"
-        android:title="Settings" />
+        android:title="@string/settings" />
 
 </menu>

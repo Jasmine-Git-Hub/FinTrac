@@ -30,7 +30,7 @@
                 android:id="@+id/tvTransactionHistory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="History"
+                android:text="@string/history_title"
                 android:textSize="28sp"
                 android:textStyle="bold"
                 android:textColor="@color/text_primary" />
@@ -39,7 +39,7 @@
                 android:id="@+id/tvTransactionCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0 transactions"
+                android:text="@string/t_0_transactions"
                 android:textSize="14sp"
                 android:textColor="@color/text_secondary"
                 android:layout_marginTop="4dp" />
@@ -55,7 +55,7 @@
             android:backgroundTint="@color/card_background"
             app:icon="@android:drawable/stat_sys_download_done"
             app:iconTint="@color/text_primary"
-            android:tooltipText="Generate Report" />
+            android:tooltipText="@string/generate_report" />
 
     </LinearLayout>
 
@@ -91,7 +91,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="This Week"
+                    android:text="@string/this_week"
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
                 <TextView
@@ -121,7 +121,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="This Month"
+                    android:text="@string/this_month"
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
                 <TextView
@@ -151,7 +151,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="This Year"
+                    android:text="@string/this_year"
                     android:textColor="@color/text_secondary"
                     android:textSize="12sp" />
                 <TextView
@@ -190,7 +190,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="All"
+                android:text="@string/all"
                 android:checked="true"
                 android:textColor="@color/text_primary"
                 app:chipBackgroundColor="@color/card_background"/>
@@ -200,7 +200,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Income"
+                android:text="@string/income"
                 android:textColor="@color/text_primary"
                 app:chipBackgroundColor="@color/card_background"/>
 
@@ -209,7 +209,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Expense"
+                android:text="@string/expense"
                 android:textColor="@color/text_primary"
                 app:chipBackgroundColor="@color/card_background"/>
 
@@ -218,7 +218,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bills"
+                android:text="@string/bills"
                 android:textColor="@color/text_primary"
                 app:chipBackgroundColor="@color/card_background"/>
 
@@ -227,7 +227,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jars"
+                android:text="@string/jars"
                 android:textColor="@color/text_primary"
                 app:chipBackgroundColor="@color/card_background"/>
 

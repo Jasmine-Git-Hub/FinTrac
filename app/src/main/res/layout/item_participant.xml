@@ -35,7 +35,7 @@
             android:id="@+id/participant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
+            android:text="@string/name"
             android:textColor="@color/text_primary"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:text="Contributed: ₱0"
+            android:text="@string/contributed_sofia"
             android:textColor="@color/text_secondary"
             android:textSize="13sp" />
     </LinearLayout>
@@ -54,7 +54,7 @@
         android:id="@+id/participant_suggested"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Suggested: ₱0"
+        android:text="@string/suggested_0"
         android:textColor="@color/blue"
         android:textSize="13sp"
         android:textStyle="bold"
@@ -68,6 +68,6 @@
         android:src="@drawable/ic_close"
         android:background="?attr/selectableItemBackgroundBorderless"
         app:tint="@color/jar_color_red"
-        android:contentDescription="Remove Participant"
+        android:contentDescription="@string/remove_participant"
         android:visibility="gone" />
 </LinearLayout>

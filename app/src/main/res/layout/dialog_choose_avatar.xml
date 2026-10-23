@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="20dp"
         android:gravity="center"
-        android:text="Choose Avatar"
+        android:text="@string/choose_avatar"
         android:textColor="@color/text_primary"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -496,7 +496,7 @@
         android:layout_height="56dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="24dp"
-        android:text="Choose from Gallery"
+        android:text="@string/choose_from_gallery"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="16sp"

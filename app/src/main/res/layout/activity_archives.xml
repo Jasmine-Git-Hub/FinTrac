@@ -26,14 +26,14 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_arrow_back"
                 app:tint="@color/text_primary"
-                android:contentDescription="Back"/>
+                android:contentDescription="@string/back"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="16dp"
-                android:text="Archives"
+                android:text="@string/archives"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/text_primary"/>
@@ -45,7 +45,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_delete"
                 app:tint="@color/jar_color_red"
-                android:contentDescription="Delete All Permanently"/>
+                android:contentDescription="@string/delete_all_permanently"/>
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -68,7 +68,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jars"
+                android:text="@string/jars"
                 android:checked="true"/>
 
             <com.google.android.material.chip.Chip
@@ -76,14 +76,14 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bills" />
+                android:text="@string/bills" />
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipArchivedChallenges"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Challenges" />
+                android:text="@string/challenges" />
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
 
@@ -99,7 +99,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="No archived items here."
+        android:text="@string/no_archived_items_here"
         android:textColor="@color/text_secondary"
         android:textSize="16sp"
         android:visibility="gone"/>

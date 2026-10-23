@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Congratulations!"
+            android:text="@string/congratulations_2"
             android:textColor="@color/text_primary"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -37,14 +37,14 @@
                 android:layout_gravity="center"
                 android:src="@drawable/trophy"
                 app:tint="#FF9800"
-                android:contentDescription="Trophy" />
+                android:contentDescription="@string/trophy" />
         </FrameLayout>
 
         <TextView
             android:id="@+id/tv_completed_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="You've completed the Challenge!"
+            android:text="@string/you_ve_completed_the_challenge"
             android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -55,7 +55,7 @@
             android:id="@+id/tv_completed_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="You successfully saved ₱0.00. Keep up the great work!"
+            android:text="@string/you_successfully_saved_0_00"
             android:textColor="@color/text_secondary"
             android:textSize="14sp"
             android:textAlignment="center"
@@ -65,7 +65,7 @@
             android:id="@+id/btn_continue_success"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Continue"
+            android:text="@string/continue_label"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="16sp"

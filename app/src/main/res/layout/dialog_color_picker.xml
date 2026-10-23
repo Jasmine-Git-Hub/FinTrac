@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Custom Color"
+        android:text="@string/desc_color_custom"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -48,7 +48,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hex"
+                android:text="@string/hex"
                 android:textColor="@color/gray"
                 android:textSize="12sp"/>
 
@@ -56,7 +56,7 @@
                 android:id="@+id/hex_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="#FF0000"
+                android:text="@string/ff0000"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -79,7 +79,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Brightness"
+                android:text="@string/brightness"
                 android:textColor="@color/gray"
                 android:textSize="12sp"/>
 
@@ -105,7 +105,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Red"
+            android:text="@string/color_red"
             android:textColor="#F44336"
             android:textStyle="bold"
             android:layout_gravity="center_vertical"/>
@@ -141,7 +141,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Green"
+            android:text="@string/color_green"
             android:textColor="#4CAF50"
             android:textStyle="bold"
             android:layout_gravity="center_vertical"/>
@@ -177,7 +177,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Blue"
+            android:text="@string/color_blue"
             android:textColor="#2196F3"
             android:textStyle="bold"
             android:layout_gravity="center_vertical"/>
@@ -216,7 +216,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_marginEnd="8dp"
-            android:text="Cancel"
+            android:text="@string/cancel"
             android:backgroundTint="@color/light_gray"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -228,7 +228,7 @@
             android:layout_height="50dp"
             android:layout_weight="1"
             android:layout_marginStart="8dp"
-            android:text="Select"
+            android:text="@string/select"
             android:backgroundTint="@color/black"
             android:textColor="@color/white"
             android:textStyle="bold"

@@ -37,7 +37,7 @@
             android:id="@+id/tv_dialog_bill_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bill Name"
+            android:text="@string/bill_name"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/text_primary" />
@@ -56,7 +56,7 @@
             android:id="@+id/tv_dialog_due_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Due Date"
+            android:text="@string/due_date"
             android:textSize="14sp"
             android:textStyle="bold"
             android:paddingHorizontal="12dp"
@@ -81,14 +81,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Category"
+                    android:text="@string/category"
                     android:textSize="12sp"
                     android:textColor="@color/text_secondary"/>
                 <TextView
                     android:id="@+id/tv_dialog_category"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Subscriptions"
+                    android:text="@string/subscriptions"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="@color/text_primary"/>
@@ -103,14 +103,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Frequency"
+                    android:text="@string/frequency"
                     android:textSize="12sp"
                     android:textColor="@color/text_secondary"/>
                 <TextView
                     android:id="@+id/tv_dialog_frequency"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Monthly"
+                    android:text="@string/monthly"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="@color/text_primary"/>
@@ -121,7 +121,7 @@
             android:id="@+id/btn_dialog_mark_paid"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Mark as Paid"
+            android:text="@string/mark_as_paid"
             android:textSize="16sp"
             android:textStyle="bold"
             app:cornerRadius="12dp"
@@ -133,7 +133,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="8dp"
-            android:text="View in Bills"
+            android:text="@string/view_in_bills"
             android:textColor="@color/dashboard_blue"
             app:strokeColor="@color/dashboard_blue"
             app:cornerRadius="12dp" />
@@ -143,7 +143,7 @@
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="Close"
+            android:text="@string/close"
             android:textColor="@color/text_secondary"
             android:layout_marginTop="4dp" />
 

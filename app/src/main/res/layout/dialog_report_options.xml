@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Generate Report"
+                android:text="@string/generate_report"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/white" />
@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Export your financial data"
+                android:text="@string/export_your_financial_data"
                 android:textSize="14sp"
                 android:textColor="@android:color/white"
                 android:alpha="0.9"
@@ -53,7 +53,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Report Type"
+            android:text="@string/report_type"
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/text_primary"
@@ -72,7 +72,7 @@
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Income vs Expense"
+                android:text="@string/income_vs_expense"
                 android:checked="true"
                 app:chipIcon="@drawable/ic_compare_arrows"
                 app:chipIconTint="@color/primary_color" />
@@ -82,7 +82,7 @@
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cash Flow"
+                android:text="@string/cash_flow"
                 app:chipIcon="@drawable/ic_trending_up"
                 app:chipIconTint="@color/primary_color" />
 
@@ -91,7 +91,7 @@
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="By Category"
+                android:text="@string/by_category"
                 app:chipIcon="@drawable/ic_category"
                 app:chipIconTint="@color/primary_color" />
 
@@ -109,7 +109,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date Range"
+            android:text="@string/date_range"
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/text_primary"
@@ -128,7 +128,7 @@
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Weekly"
+                android:text="@string/weekly"
                 app:chipIcon="@drawable/ic_week"
                 app:chipIconTint="@color/primary_color" />
 
@@ -137,7 +137,7 @@
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Monthly"
+                android:text="@string/monthly"
                 android:checked="true"
                 app:chipIcon="@drawable/ic_month"
                 app:chipIconTint="@color/primary_color" />
@@ -147,7 +147,7 @@
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yearly"
+                android:text="@string/yearly"
                 app:chipIcon="@drawable/ic_year"
                 app:chipIconTint="@color/primary_color" />
 
@@ -156,7 +156,7 @@
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Custom"
+                android:text="@string/custom"
                 app:chipIcon="@drawable/ic_calendar"
                 app:chipIconTint="@color/primary_color" />
 
@@ -187,7 +187,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Custom Date Range"
+                        android:text="@string/custom_date_range"
                         android:textSize="12sp"
                         android:textColor="@color/text_secondary"
                         android:layout_marginBottom="12dp" />
@@ -204,7 +204,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:layout_marginEnd="8dp"
-                            android:text="Start Date"
+                            android:text="@string/start_date"
                             app:icon="@drawable/ic_calendar"
                             app:iconGravity="textStart" />
 
@@ -215,7 +215,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:layout_marginStart="8dp"
-                            android:text="End Date"
+                            android:text="@string/end_date"
                             app:icon="@drawable/ic_calendar"
                             app:iconGravity="textStart" />
 
@@ -239,7 +239,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Export Format"
+            android:text="@string/export_format"
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@color/text_primary"
@@ -258,7 +258,7 @@
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CSV"
+                android:text="@string/csv"
                 android:checked="true"
                 app:chipIcon="@drawable/ic_csv"
                 app:chipIconTint="@color/primary_color" />
@@ -268,7 +268,7 @@
                 style="@style/Widget.Material3.Chip.Filter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PDF"
+                android:text="@string/pdf"
                 app:chipIcon="@drawable/ic_pdf"
                 app:chipIconTint="@color/primary_color" />
 
@@ -288,7 +288,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
-                android:text="Cancel"
+                android:text="@string/cancel"
                 android:textColor="@color/text_secondary"
                 app:icon="@drawable/ic_close" />
 
@@ -299,7 +299,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
-                android:text="Generate"
+                android:text="@string/generate"
                 app:icon="@drawable/ic_download"
                 app:iconGravity="textStart" />
 

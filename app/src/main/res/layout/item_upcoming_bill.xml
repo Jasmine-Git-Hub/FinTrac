@@ -45,7 +45,7 @@
                 android:id="@+id/tv_bill_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Netflix Subscription"
+                android:text="@string/netflix_subscription"
                 android:textColor="@color/text_primary"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -54,7 +54,7 @@
                 android:id="@+id/tv_due_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Due Tomorrow"
+                android:text="@string/due_tomorrow"
                 android:textSize="13sp"
                 android:textStyle="bold"
                 android:layout_marginTop="2dp"/>

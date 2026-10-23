@@ -312,7 +312,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:text="Based on current progress, each member should contribute to reach the goal equally."
+                android:text="@string/based_on_current_progress_each"
                 android:textColor="@color/text_secondary"
                 android:textSize="12sp"
                 android:gravity="center"

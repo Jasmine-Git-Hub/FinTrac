@@ -23,7 +23,7 @@
                 android:id="@+id/dialog_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Invite Participants"
+                android:text="@string/invite_participants"
                 android:textColor="@color/text_primary"
                 android:textSize="22sp"
                 android:textStyle="bold"
@@ -37,13 +37,13 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/ic_close"
                 app:tint="@color/text_secondary"
-                android:contentDescription="Close" />
+                android:contentDescription="@string/close" />
         </RelativeLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter email to invite:"
+            android:text="@string/enter_email_to_invite"
             android:textColor="@color/text_secondary"
             android:textSize="14sp"
             android:layout_marginBottom="8dp"/>
@@ -63,7 +63,7 @@
                 android:id="@+id/email_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email Address"
+                android:hint="@string/email_address"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/text_primary"
                 android:padding="16dp"/>
@@ -74,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="24dp"
-            android:text="Send Invite"
+            android:text="@string/send_invite"
             android:textAllCaps="false"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="12dp"
-            android:text="Share Invite Link"
+            android:text="@string/share_invite_link"
             android:textAllCaps="false"
             android:textColor="@color/text_primary"
             app:strokeColor="@color/text_secondary"

@@ -41,7 +41,7 @@
                 android:id="@+id/text_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Grocery"
+                android:text="@string/grocery"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginStart="64dp"
-        android:text="Added money to jar"
+        android:text="@string/added_money_to_jar"
         android:textColor="@color/gray"
         android:textSize="14sp"
         android:visibility="visible" />

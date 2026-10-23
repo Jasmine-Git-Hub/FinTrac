@@ -23,7 +23,7 @@
             android:src="@drawable/ic_track_expenses"
             android:padding="10dp"
             android:background="@drawable/circle_background_placeholder"
-            android:contentDescription="icon"/>
+            android:contentDescription="@string/icon"/>
 
         <LinearLayout
             android:layout_width="0dp"
