@@ -72,19 +72,17 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
             holder.ivIcon.setColorFilter(ContextCompat.getColor(context, R.color.red));
         }
 
-        // Set Icons base sa module
-        String category = item.getCategory() != null ? item.getCategory().toLowerCase() : "";
-        switch (category) {
-            case "bills":
-                holder.ivIcon.setImageResource(R.drawable.house);
-                break;
-            case "jars":
-            case "challenges":
-                holder.ivIcon.setImageResource(R.drawable.piggy);
-                break;
-            default:
-                holder.ivIcon.setImageResource(R.drawable.ic_track_expenses);
-                break;
+        // Icon by what the entry is: bill payments and savings get their own icons,
+        // everything else an up (income) or down (expense) arrow, matching Home
+        String category = item.getCategory() != null ? item.getCategory().toLowerCase(java.util.Locale.US) : "";
+        String title = item.getTitle() != null ? item.getTitle() : "";
+        if (category.equals("bills") || title.startsWith("Paid Bill: ") || title.startsWith("Paid: ")) {
+            holder.ivIcon.setImageResource(R.drawable.house);
+        } else if (category.equals("jars") || category.equals("challenges") || category.equals("savings")
+                || title.startsWith("Saved to Jar: ")) {
+            holder.ivIcon.setImageResource(R.drawable.piggy);
+        } else {
+            holder.ivIcon.setImageResource(item.isExpense() ? R.drawable.ic_arrow_down : R.drawable.ic_arrow_up);
         }
     }
 

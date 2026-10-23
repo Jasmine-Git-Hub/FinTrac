@@ -82,6 +82,9 @@ public class BillsAdapter extends ListAdapter<Bill, BillsAdapter.BillViewHolder>
         if (bill.logoResId != 0) {
             holder.imgLogo.setImageResource(bill.logoResId);
             holder.imgLogo.setVisibility(View.VISIBLE);
+            // The icon is drawn black; tint it with the theme's text color so it shows in dark mode
+            holder.imgLogo.setImageTintList(android.content.res.ColorStateList.valueOf(
+                    androidx.core.content.ContextCompat.getColor(context, R.color.text_secondary)));
         } else {
             holder.imgLogo.setVisibility(View.INVISIBLE);
         }
