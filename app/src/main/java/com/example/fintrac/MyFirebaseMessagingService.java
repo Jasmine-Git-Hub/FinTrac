@@ -29,6 +29,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     }
 
     private void showNotification(String title, String body) {
+        if (!NotificationPrefs.canNotify(this)) return;
         Intent intent = new Intent(this, LogIn.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 

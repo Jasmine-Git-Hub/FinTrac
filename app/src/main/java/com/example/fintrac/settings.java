@@ -53,6 +53,17 @@ public class settings extends Fragment {
     };
 
     private int selectedCurrencyIndex = 0;
+
+    private boolean askedForPermissionBefore = false;
+    private final androidx.activity.result.ActivityResultLauncher<String> notificationPermission =
+            registerForActivityResult(new androidx.activity.result.contract.ActivityResultContracts.RequestPermission(),
+                    granted -> {
+                        Context ctx = getContext();
+                        if (ctx == null) return;
+                        if (switchPushNotifications != null) switchPushNotifications.setChecked(granted);
+                        showToast(ctx, granted ? "Push Notifications enabled"
+                                : "Notifications are blocked. You can allow them in your phone's settings.");
+                    });
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
 
@@ -144,9 +155,8 @@ public class settings extends Fragment {
 
             // Load notifications setting
             if (switchPushNotifications != null) {
-                SharedPreferences prefs = context.getSharedPreferences("SettingsPrefs", Context.MODE_PRIVATE);
-                boolean isPushEnabled = prefs.getBoolean("push_notifications_enabled", true);
-                switchPushNotifications.setChecked(isPushEnabled);
+                // Shown as on only if the user wants them AND Android allows them
+                switchPushNotifications.setChecked(NotificationPrefs.canNotify(context));
             }
 
         } catch (Exception e) {
@@ -293,15 +303,24 @@ public class settings extends Fragment {
         if (switchPushNotifications != null) {
             switchPushNotifications.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 Context ctx = getContext();
-                if (ctx != null) {
-                    try {
-                        SharedPreferences prefs = ctx.getSharedPreferences("SettingsPrefs", Context.MODE_PRIVATE);
-                        prefs.edit().putBoolean("push_notifications_enabled", isChecked).apply();
-                        showToast(ctx, "Push Notifications " + (isChecked ? "enabled" : "disabled"));
-                    } catch (Exception e) {
-                        Log.e(TAG, "Error saving notification setting: " + e.getMessage());
+                if (ctx == null || !buttonView.isPressed()) return; // ignore programmatic changes
+                NotificationPrefs.setEnabledByUser(ctx, isChecked);
+                if (isChecked && !NotificationPrefs.hasSystemPermission(ctx)) {
+                    // Ask Android; the result callback reports what happened
+                    boolean canAsk = android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU
+                            && (!askedForPermissionBefore
+                                || shouldShowRequestPermissionRationale(android.Manifest.permission.POST_NOTIFICATIONS));
+                    if (canAsk) {
+                        askedForPermissionBefore = true;
+                        notificationPermission.launch(android.Manifest.permission.POST_NOTIFICATIONS);
+                    } else {
+                        // Permanently denied: only the system settings screen can turn it back on
+                        showToast(ctx, "Allow notifications for FinTrac in your phone's settings");
+                        NotificationPrefs.openSystemSettings(ctx);
                     }
+                    return;
                 }
+                showToast(ctx, "Push Notifications " + (isChecked ? "enabled" : "disabled"));
             });
         }
 

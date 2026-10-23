@@ -41,10 +41,7 @@ public class FinTracWorker extends Worker {
     @Override
     public Result doWork() {
         // I-check kung in-allow ba ng user ang notifications sa Settings nila
-        SharedPreferences prefs = getApplicationContext().getSharedPreferences("SettingsPrefs", Context.MODE_PRIVATE);
-        boolean isNotifEnabled = prefs.getBoolean("push_notifications_enabled", true); // Default is true
-
-        if (!isNotifEnabled) {
+        if (!NotificationPrefs.canNotify(getApplicationContext())) {
             Log.d("FinTracWorker", "Notifications are disabled in settings. Skipping work.");
             return Result.success(); // Wag mag-send kung naka-off sa settings
         }

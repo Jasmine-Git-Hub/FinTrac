@@ -196,6 +196,7 @@ public class DeadlineReminderReceiver extends BroadcastReceiver {
     // DINAGDAG ANG BOOLEAN silent DITO PARA PIGILAN ANG POPUP
     private void showSystemNotification(Context context, String title, String message, int notificationId, boolean silent) {
         if (silent) return; // MAGIC FIX: Wag mag-popup sa phone kung silent sync!
+        if (!NotificationPrefs.canNotify(context)) return; // Switched off in Settings, or permission denied
 
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 

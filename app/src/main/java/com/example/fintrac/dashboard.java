@@ -4,7 +4,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -12,12 +13,20 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class dashboard extends BaseActivity implements TabNavigator {
     private BottomNavigationView bottomNavigationView;
 
+    // Android 13+ requires asking before reminders can be shown at all
+    private final ActivityResultLauncher<String> notificationPermission =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {});
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Apply theme BEFORE super.onCreate and setContentView
         SettingHelper.applyTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        if (savedInstanceState == null) {
+            NotificationPrefs.requestIfNeeded(this, notificationPermission);
+        }
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 

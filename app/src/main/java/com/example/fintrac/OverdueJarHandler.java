@@ -148,6 +148,7 @@ public class OverdueJarHandler {
     }
 
     private void showNotification(Context context, String title, String message, Intent intent, int notificationId) {
+        if (!NotificationPrefs.canNotify(context)) return;
         android.app.NotificationManager notificationManager =
                 (android.app.NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
