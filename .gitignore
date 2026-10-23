@@ -17,3 +17,6 @@ app/release/
 *.jks
 *.keystore
 keystore.properties
+
+# Old Word copies of .gitignore (not used)
+.gitignore.docx
