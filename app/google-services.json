@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "606379172372-v6mgv096cj9a1fd2eac7vb85rkgpg203.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fintrac",
+            "certificate_hash": "ef50ea224ae695c8265a6ad8b0c44f8473689aa4"
+          }
+        },
+        {
           "client_id": "606379172372-odjd2qnfhiu7tjnlh2gll0qbl1pmjqac.apps.googleusercontent.com",
           "client_type": 3
         }
