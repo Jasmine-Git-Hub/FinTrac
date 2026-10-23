@@ -159,16 +159,23 @@ public class JarsFragment extends Fragment {
                 // Snap back; the live list removes the row if the delete goes through
                 adapter.notifyItemChanged(position);
                 JarItem jar = adapter.getJarAt(position);
-                if (!viewModel.canDelete(jar)) {
-                    Toast.makeText(requireContext(), "Only the creator can delete this jar", Toast.LENGTH_SHORT).show();
-                    return;
+                if (viewModel.isOwner(jar)) {
+                    new AlertDialog.Builder(requireContext())
+                            .setTitle("Archive Jar")
+                            .setMessage("Move '" + jar.getName() + "' to Archives? You can restore it or delete it "
+                                    + "permanently from there. It's deleted automatically after 30 days.")
+                            .setPositiveButton("Archive", (dialog, which) -> viewModel.archive(jar))
+                            .setNegativeButton("Cancel", null)
+                            .show();
+                } else {
+                    new AlertDialog.Builder(requireContext())
+                            .setTitle("Leave Jar")
+                            .setMessage("Leave '" + jar.getName() + "'? Only the owner can archive or delete it. "
+                                    + "Your contributions stay in the jar.")
+                            .setPositiveButton("Leave", (dialog, which) -> viewModel.leave(jar))
+                            .setNegativeButton("Cancel", null)
+                            .show();
                 }
-                new AlertDialog.Builder(requireContext())
-                        .setTitle("Delete Jar")
-                        .setMessage("Are you sure you want to delete '" + jar.getName() + "'? This action cannot be undone.")
-                        .setPositiveButton("Delete", (dialog, which) -> viewModel.delete(jar))
-                        .setNegativeButton("Cancel", null)
-                        .show();
             }
         }).attachToRecyclerView(recyclerView);
     }

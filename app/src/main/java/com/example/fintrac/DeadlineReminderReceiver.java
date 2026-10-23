@@ -50,6 +50,9 @@ public class DeadlineReminderReceiver extends BroadcastReceiver {
         checkSharedJarDeadlines(context, db, userId, today);
         checkPersonalJarDeadlines(context, db, userId, today);
         checkChallengeStatus(context, db, userId);
+
+        // Jars whose deadline has passed move to Archives (restorable for 30 days)
+        new OverdueJarHandler().checkAndArchiveOverdueJars(context, null);
     }
 
     private void checkBillDeadlines(Context context, FirebaseFirestore db, String userId, Calendar today) {

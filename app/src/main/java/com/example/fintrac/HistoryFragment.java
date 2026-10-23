@@ -111,7 +111,11 @@ public class HistoryFragment extends Fragment {
 
     /** Report type, date range (incl. custom) and CSV/PDF format. */
     private void showCustomReportDialog(List<Transaction> all) {
-        View view = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_report_options, null);
+        // This layout uses Material 3 widget styles; the app theme is MaterialComponents, so inflate
+        // it with a Material 3 theme (as Bills does for its dialog) or the chips crash on creation.
+        android.view.ContextThemeWrapper themed = new android.view.ContextThemeWrapper(requireContext(),
+                com.google.android.material.R.style.Theme_Material3_DayNight_NoActionBar);
+        View view = LayoutInflater.from(themed).inflate(R.layout.dialog_report_options, null);
         AlertDialog dialog = new AlertDialog.Builder(requireContext()).setView(view).create();
 
         ChipGroup typeChips = view.findViewById(R.id.chipGroupReportType);

@@ -141,7 +141,7 @@ public class OverdueJarHandler {
 
         // Use your existing notification system
         String title = "Jar Overdue: " + jarName;
-        String message = "This jar has been moved to Archives due to inactivity.";
+        String message = "Its deadline has passed, so it was moved to Archives. You can restore it within 30 days.";
 
         // You can use your existing NotificationHelper or create a simple one
         showNotification(context, title, message, intent, jarId.hashCode());

@@ -89,20 +89,27 @@ public class JarsViewModel extends ViewModel {
         return null;
     }
 
-    /** Swipe-to-delete asks this first; only the owner may delete. */
-    public boolean canDelete(JarItem jar) {
+    /** The owner archives a jar (for everyone); other participants can only leave it. */
+    public boolean isOwner(JarItem jar) {
         String uid = repository.currentUserId();
         return uid != null && uid.equals(jar.getCreatedBy());
     }
 
-    public void delete(JarItem jar) {
-        if (!canDelete(jar)) {
-            message("Only the creator can delete this jar");
-            return;
-        }
-        repository.delete(jar.getId())
-                .addOnSuccessListener(v -> message("Jar deleted successfully"))
-                .addOnFailureListener(e -> message("Couldn't delete the jar. Try again."));
+    /** Owner: move to Archives (restorable for 30 days, deletable there). */
+    public void archive(JarItem jar) {
+        if (!isOwner(jar)) return;
+        repository.archive(jar.getId())
+                .addOnSuccessListener(v -> message("Jar moved to Archives"))
+                .addOnFailureListener(e -> message("Couldn't archive the jar. Try again."));
+    }
+
+    /** Participant: leave a jar someone else owns. */
+    public void leave(JarItem jar) {
+        String uid = repository.currentUserId();
+        if (uid == null || isOwner(jar)) return;
+        repository.removeParticipant(jar.getId(), uid)
+                .addOnSuccessListener(v -> message("You left " + jar.getName()))
+                .addOnFailureListener(e -> message("Couldn't leave the jar. Try again."));
     }
 
     private void subscribe() {
