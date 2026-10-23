@@ -16,7 +16,28 @@ val localProps = Properties().apply {
 }
 fun localProp(key: String) = "\"${localProps.getProperty(key, "")}\""
 
+// Release signing key details live in keystore.properties (git-ignored), never in source:
+//   storeFile=C:/Users/you/keys/fintrac-upload.jks
+//   storePassword=...
+//   keyAlias=upload
+//   keyPassword=...
+val keystoreProps = Properties().apply {
+    val f = rootProject.file("keystore.properties")
+    if (f.exists()) f.inputStream().use { load(it) }
+}
+
 android {
+    signingConfigs {
+        if (keystoreProps.getProperty("storeFile") != null) {
+            create("release") {
+                storeFile = file(keystoreProps.getProperty("storeFile"))
+                storePassword = keystoreProps.getProperty("storePassword")
+                keyAlias = keystoreProps.getProperty("keyAlias")
+                keyPassword = keystoreProps.getProperty("keyPassword")
+            }
+        }
+    }
+
     namespace = "com.example.fintrac"
     compileSdk = 36
 
@@ -44,6 +65,8 @@ android {
 
     buildTypes {
         release {
+            // Signed only when keystore.properties exists; otherwise the build is unsigned
+            signingConfigs.findByName("release")?.let { signingConfig = it }
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
