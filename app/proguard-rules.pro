@@ -23,3 +23,11 @@
     public static int d(...);
     public static int i(...);
 }
+
+# iText uses SLF4J for logging; the optional backend is not bundled (logging becomes a no-op)
+-dontwarn org.slf4j.impl.**
+
+# iText loads some components (fonts, image handlers) reflectively; keep it intact so PDF
+# export works in minified release builds
+-keep class com.itextpdf.** { *; }
+-dontwarn com.itextpdf.**
