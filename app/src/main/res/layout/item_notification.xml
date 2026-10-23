@@ -19,6 +19,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
+        android:importantForAccessibility="no"
             android:id="@+id/notification_icon"
             android:layout_width="24dp"
             android:layout_height="24dp"

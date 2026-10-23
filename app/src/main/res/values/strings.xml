@@ -158,7 +158,7 @@
     <string name="jar_icon_desc">Jar icon</string>
     <string name="baguio_trip">Baguio Trip</string>
     <string name="budget_amount">/₱5,000</string>
-    <string name="progress_percentage">24% complete</string>
+    <string name="progress_percentage" formatted="false">24% complete</string>
     <string name="add_money">Add Money</string>
     <string name="view_activity">View Activity</string>
     <string name="participants">Participants</string>
@@ -675,4 +675,8 @@
 
     <!-- ===== Challenges screen (Phase 3) ===== -->
     <string name="challenges_empty">No active challenges.\nPick a quick start above or tap + to begin one.</string>
+
+    <!-- ===== Accessibility labels (Phase 3) ===== -->
+    <string name="a11y_profile_picture">Profile picture</string>
+    <string name="a11y_avatar">Avatar %1$d</string>
 </resources>

@@ -49,6 +49,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar1"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -69,6 +70,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar2"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -89,6 +91,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar3"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -109,6 +112,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar4"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -138,6 +142,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar5"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -158,6 +163,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar6"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -178,6 +184,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar7"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -198,6 +205,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar8"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -227,6 +235,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar9"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -247,6 +256,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar10"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -267,6 +277,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar11"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -287,6 +298,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar12"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -316,6 +328,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar13"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -336,6 +349,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar14"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -356,6 +370,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar15"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -376,6 +391,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar16"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -405,6 +421,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar18"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -425,6 +442,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar19"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -445,6 +463,7 @@
                     android:focusable="true">
 
                     <ImageView
+        android:importantForAccessibility="no"
                         android:id="@+id/avatar20"
                         android:layout_width="60dp"
                         android:layout_height="60dp"

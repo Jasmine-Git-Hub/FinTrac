@@ -9,6 +9,7 @@
     android:background="@color/page_background">
 
     <ImageView
+        android:importantForAccessibility="no"
         android:layout_width="72dp"
         android:layout_height="72dp"
         android:src="@android:drawable/ic_dialog_email"

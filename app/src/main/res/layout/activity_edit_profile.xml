@@ -19,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+        android:contentDescription="@string/back"
             android:id="@+id/btnBack"
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -76,6 +77,7 @@
                     app:cardBackgroundColor="@color/card_background">
 
                     <ImageView
+        android:contentDescription="@string/a11y_profile_picture"
                         android:id="@+id/ivProfilePicture"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -94,6 +96,7 @@
                     app:cardBackgroundColor="#FF9800"
                     app:cardElevation="10dp">
                     <ImageView
+        android:importantForAccessibility="no"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:padding="8dp"

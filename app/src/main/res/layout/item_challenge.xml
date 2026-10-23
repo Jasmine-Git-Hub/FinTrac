@@ -15,6 +15,7 @@
         android:padding="16dp">
 
         <ImageView
+        android:importantForAccessibility="no"
             android:id="@+id/iv_icon"
             android:layout_width="48dp"
             android:layout_height="48dp"

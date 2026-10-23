@@ -225,6 +225,7 @@ public class EditProfileActivity extends BaseActivity {
             final int index = i;
             View container = view.findViewById(containerIds[i]);
             if (container != null) {
+                container.setContentDescription(getString(R.string.a11y_avatar, index + 1));
                 // Find the ImageView inside the container to preload the avatar
                 int imageId = 0;
                 if (index < 16) {
