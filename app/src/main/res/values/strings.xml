@@ -672,4 +672,7 @@
     <!-- ===== History screen (Phase 2) ===== -->
     <string name="history_empty">No transactions yet.</string>
     <string name="history_empty_filtered">Nothing in this category yet.</string>
+
+    <!-- ===== Challenges screen (Phase 3) ===== -->
+    <string name="challenges_empty">No active challenges.\nPick a quick start above or tap + to begin one.</string>
 </resources>

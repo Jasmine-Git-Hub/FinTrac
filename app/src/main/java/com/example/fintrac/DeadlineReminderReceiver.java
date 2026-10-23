@@ -133,8 +133,9 @@ public class DeadlineReminderReceiver extends BroadcastReceiver {
 
                         if (currentDay == null || totalDays == null) continue;
 
-                        long hoursSinceCheckIn = (lastCheckIn == null) ? 24 : TimeUnit.MILLISECONDS.toHours(now - lastCheckIn);
-                        if (hoursSinceCheckIn >= 20 && currentDay < totalDays) {
+                        // Same 8 AM rule as the Check In button, so we never nudge while it's still locked
+                        boolean canCheckIn = ChallengeItem.canCheckIn(lastCheckIn == null ? 0 : lastCheckIn, now);
+                        if (canCheckIn && currentDay < totalDays) {
                             String msg = "Consistency is key! Time to check-in for your '" + name + "' challenge.";
                             // PASSED isSilent HERE
                             showSystemNotification(context, "Challenge Check-in", msg, (doc.getId() + "checkin").hashCode(), isSilent);

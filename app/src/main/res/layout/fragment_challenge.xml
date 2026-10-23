@@ -250,5 +250,20 @@
             app:layout_constraintTop_toBottomOf="@id/tv_active_challenges"
             tools:listitem="@layout/item_challenge" />
 
+        <!-- Shown instead of the list when there are no active challenges, or loading failed -->
+        <TextView
+            android:id="@+id/tv_challenges_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:paddingHorizontal="32dp"
+            android:paddingBottom="96dp"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tv_active_challenges"
+            tools:text="@string/challenges_empty" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

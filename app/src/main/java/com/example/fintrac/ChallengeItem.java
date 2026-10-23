@@ -1,5 +1,6 @@
 package com.example.fintrac;
 
+import com.example.fintrac.core.Money;
 import com.google.firebase.firestore.Exclude;
 import java.io.Serializable;
 import java.util.Calendar;
@@ -58,18 +59,62 @@ public class ChallengeItem implements Serializable {
         this.progressEnd = totalDays + " days";
     }
 
-    @Exclude
-    public boolean isCheckInAvailable() {
+    /** Hour of the day when a new check-in day starts. */
+    public static final int CHECK_IN_RESET_HOUR = 8;
+
+    /**
+     * The one check-in rule used by the screen, the save, and the reminders:
+     * a new check-in day starts at 8:00 AM (not midnight).
+     */
+    public static boolean canCheckIn(long lastCheckInTime, long now) {
         if (lastCheckInTime == 0) return true;
+        Calendar boundary = Calendar.getInstance();
+        boundary.setTimeInMillis(now);
+        boundary.set(Calendar.HOUR_OF_DAY, CHECK_IN_RESET_HOUR);
+        boundary.set(Calendar.MINUTE, 0);
+        boundary.set(Calendar.SECOND, 0);
+        boundary.set(Calendar.MILLISECOND, 0);
+        if (now < boundary.getTimeInMillis()) {
+            boundary.add(Calendar.DAY_OF_YEAR, -1);
+        }
+        return lastCheckInTime < boundary.getTimeInMillis();
+    }
 
-        Calendar last = Calendar.getInstance();
-        last.setTimeInMillis(lastCheckInTime);
+    @Exclude
+    public boolean canCheckInNow() {
+        return !isFinished() && canCheckIn(lastCheckInTime, System.currentTimeMillis());
+    }
 
-        Calendar now = Calendar.getInstance();
-        now.setTimeInMillis(System.currentTimeMillis());
+    @Exclude
+    public boolean isFinished() {
+        return totalDays > 0 && currentDay >= totalDays;
+    }
 
-        return last.get(Calendar.YEAR) != now.get(Calendar.YEAR) ||
-                last.get(Calendar.DAY_OF_YEAR) != now.get(Calendar.DAY_OF_YEAR);
+    /** Amount saved per check-in (base currency). Zero for malformed challenges. */
+    @Exclude
+    public Money dailyAmount() {
+        if (totalDays <= 0) return Money.ZERO;
+        return Money.ofCents(Money.ofPesos(targetAmount).cents() / totalDays);
+    }
+
+    /** Saved so far; the final day gets any rounding remainder so a finished challenge equals its target. */
+    @Exclude
+    public Money savedSoFar() {
+        if (isFinished()) return Money.ofPesos(targetAmount);
+        return Money.ofCents(dailyAmount().cents() * Math.max(currentDay, 0));
+    }
+
+    /** Field comparison for list diffing. */
+    @Exclude
+    public boolean sameContentAs(ChallengeItem other) {
+        return other != null
+                && java.util.Objects.equals(documentId, other.documentId)
+                && java.util.Objects.equals(name, other.name)
+                && java.util.Objects.equals(description, other.description)
+                && currentDay == other.currentDay
+                && totalDays == other.totalDays
+                && targetAmount == other.targetAmount
+                && lastCheckInTime == other.lastCheckInTime;
     }
 
     // --- Getters & Setters ---
