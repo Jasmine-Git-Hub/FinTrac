@@ -603,5 +603,20 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
+        <!-- Required by Google Play: in-app account and data deletion -->
+        <TextView
+            android:id="@+id/btnDeleteAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            android:text="@string/delete_account"
+            android:textColor="#B71C1C"
+            android:textSize="14sp" />
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

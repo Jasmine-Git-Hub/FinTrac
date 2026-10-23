@@ -679,4 +679,14 @@
     <!-- ===== Accessibility labels (Phase 3) ===== -->
     <string name="a11y_profile_picture">Profile picture</string>
     <string name="a11y_avatar">Avatar %1$d</string>
+
+    <!-- ===== Account deletion (Play requirement) ===== -->
+    <string name="delete_account">Delete my account</string>
+    <string name="delete_account_title">Delete your account?</string>
+    <string name="delete_account_message">This permanently deletes your FinTrac account and all your data: transactions, bills, challenges, notifications and jars you own. You\'ll be removed from jars others own. This can\'t be undone.</string>
+    <string name="delete_account_confirm">Delete everything</string>
+    <string name="delete_account_password_prompt">Enter your password to confirm</string>
+    <string name="delete_account_progress">Deleting your account…</string>
+    <string name="delete_account_done">Your account and data have been deleted.</string>
+    <string name="delete_account_failed">Couldn\'t delete your account. Check your connection and try again.</string>
 </resources>

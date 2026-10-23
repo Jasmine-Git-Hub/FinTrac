@@ -83,8 +83,11 @@ service cloud.firestore {
       allow create: if signedIn()
         && request.resource.data.userId == request.auth.uid
         && request.auth.uid in jarParticipants(request.resource.data.jarId);
+      // Jar members tidy up when a jar is deleted; anyone may delete their own entries
+      // (account deletion), even after leaving the jar.
       allow delete: if signedIn()
-        && request.auth.uid in jarParticipants(resource.data.jarId);
+        && (resource.data.userId == request.auth.uid
+            || request.auth.uid in jarParticipants(resource.data.jarId));
     }
 
     match /jarTransactions/{txId} {
@@ -94,6 +97,7 @@ service cloud.firestore {
       allow create: if signedIn()
         && request.resource.data.userId == request.auth.uid
         && request.auth.uid in jarParticipants(request.resource.data.jarId);
+      allow delete: if signedIn() && resource.data.userId == request.auth.uid;
     }
 
     // Everything else (including legacy root /bills and /test_connection) is denied.

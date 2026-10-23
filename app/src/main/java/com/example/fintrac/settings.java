@@ -30,6 +30,7 @@ public class settings extends Fragment {
     private TextView tvSelectedCurrency;
     private MaterialCardView cardCurrencySelector;
     private MaterialCardView btnLogout;
+    private View btnDeleteAccount;
     private MaterialCardView btnArchives;
     private MaterialCardView btnAbout;
     private TextView btnEditProfile, btnChangePassword;
@@ -103,6 +104,7 @@ public class settings extends Fragment {
             tvSelectedCurrency = view.findViewById(R.id.tvSelectedCurrency);
             cardCurrencySelector = view.findViewById(R.id.cardCurrencySelector);
             btnLogout = view.findViewById(R.id.btnLogout);
+            btnDeleteAccount = view.findViewById(R.id.btnDeleteAccount);
             btnEditProfile = view.findViewById(R.id.btnEditProfile);
             btnChangePassword = view.findViewById(R.id.btnChangePassword);
             switchDarkMode = view.findViewById(R.id.switchDarkMode);
@@ -267,6 +269,7 @@ public class settings extends Fragment {
         // Logout
         if (btnLogout != null) {
             btnLogout.setOnClickListener(v -> showLogoutConfirmation());
+            if (btnDeleteAccount != null) btnDeleteAccount.setOnClickListener(v -> confirmDeleteAccount());
         }
 
         // Edit Profile
@@ -430,6 +433,85 @@ public class settings extends Fragment {
         }
     }
 
+    // ---- Account deletion (Google Play requirement) ----
+
+    private void confirmDeleteAccount() {
+        new AlertDialog.Builder(requireContext())
+                .setTitle(R.string.delete_account_title)
+                .setMessage(R.string.delete_account_message)
+                .setPositiveButton(R.string.delete_account_confirm, (d, w) -> reauthenticateThenDelete())
+                .setNegativeButton(R.string.cancel, null)
+                .show();
+    }
+
+    /** Firebase only deletes accounts that signed in recently, so confirm identity first. */
+    private void reauthenticateThenDelete() {
+        com.example.fintrac.data.AccountDeletion deletion = new com.example.fintrac.data.AccountDeletion();
+        if (deletion.usesPassword()) {
+            android.widget.EditText password = new android.widget.EditText(requireContext());
+            password.setInputType(android.text.InputType.TYPE_CLASS_TEXT
+                    | android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            password.setHint(R.string.delete_account_password_prompt);
+            android.widget.FrameLayout box = new android.widget.FrameLayout(requireContext());
+            int pad = (int) (20 * getResources().getDisplayMetrics().density);
+            box.setPadding(pad, pad / 2, pad, 0);
+            box.addView(password);
+            new AlertDialog.Builder(requireContext())
+                    .setTitle(R.string.delete_account_password_prompt)
+                    .setView(box)
+                    .setPositiveButton(R.string.delete_account_confirm, (d, w) -> {
+                        String email = mAuth.getCurrentUser() != null ? mAuth.getCurrentUser().getEmail() : null;
+                        if (email == null) return;
+                        // Same trimming as sign-up/login, so the password matches what was saved
+                        runDeletion(deletion, com.google.firebase.auth.EmailAuthProvider
+                                .getCredential(email, password.getText().toString().trim()));
+                    })
+                    .setNegativeButton(R.string.cancel, null)
+                    .show();
+        } else {
+            GoogleCredentialHelper.signIn(requireActivity(), new GoogleCredentialHelper.Callback() {
+                @Override
+                public void onIdToken(String idToken) {
+                    runDeletion(deletion, com.google.firebase.auth.GoogleAuthProvider.getCredential(idToken, null));
+                }
+
+                @Override
+                public void onCancelled() {}
+
+                @Override
+                public void onError(String message) {
+                    showToast(getContext(), getString(R.string.delete_account_failed));
+                }
+            });
+        }
+    }
+
+    private void runDeletion(com.example.fintrac.data.AccountDeletion deletion,
+                             com.google.firebase.auth.AuthCredential credential) {
+        android.app.ProgressDialog progress = new android.app.ProgressDialog(requireContext());
+        progress.setMessage(getString(R.string.delete_account_progress));
+        progress.setCancelable(false);
+        progress.show();
+
+        android.content.Context app = requireContext().getApplicationContext();
+        deletion.deleteEverything(app, credential).addOnCompleteListener(task -> {
+            progress.dismiss();
+            if (!task.isSuccessful()) {
+                Exception e = task.getException();
+                showToast(app, e instanceof com.example.fintrac.core.UserFacingException
+                        ? e.getMessage() : getString(R.string.delete_account_failed));
+                return;
+            }
+            GoogleCredentialHelper.clearState(app);
+            OtpManager.clearSession(app);
+            mAuth.signOut();
+            showToast(app, getString(R.string.delete_account_done));
+            Intent intent = new Intent(app, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+        });
+    }
+
     private void showToast(Context context, String message) {
         if (context != null && message != null) {
             try {
@@ -456,6 +538,7 @@ public class settings extends Fragment {
         tvSelectedCurrency = null;
         cardCurrencySelector = null;
         btnLogout = null;
+        btnDeleteAccount = null;
         btnArchives = null;
         btnAbout = null;
         btnEditProfile = null;
