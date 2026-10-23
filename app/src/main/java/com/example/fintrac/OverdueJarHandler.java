@@ -45,12 +45,15 @@ public class OverdueJarHandler {
         String userId = currentUser.getUid();
         Date today = getTodayWithoutTime();
 
+        // Filter archived jars here rather than in the query: new jars store the flag as
+        // "archived" (so whereEqualTo("isArchived", false) skipped them), and combining it with
+        // array-contains would also need a composite index.
         db.collection(COLLECTION_JARS)
                 .whereArrayContains("participants", userId)
-                .whereEqualTo("isArchived", false)
                 .get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {
                     for (com.google.firebase.firestore.QueryDocumentSnapshot doc : queryDocumentSnapshots) {
+                        if (Boolean.TRUE.equals(doc.getBoolean("isArchived"))) continue;
                         String deadlineStr = doc.getString("deadline");
                         if (deadlineStr == null || deadlineStr.isEmpty()) continue;
 
