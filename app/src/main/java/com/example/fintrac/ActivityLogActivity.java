@@ -16,6 +16,9 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fintrac.core.DataListener;
+import com.example.fintrac.core.Subscription;
+import com.example.fintrac.data.FirestoreJarRepository;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -30,7 +33,7 @@ public class ActivityLogActivity extends BaseActivity {
     private RecyclerView recyclerView;
     private ActivityLogAdapter adapter;
 
-    private JarFirestoreManager jarFirestoreManager;
+    private Subscription activitySubscription;
     private String jarId;
     private String jarName;
     private FirebaseUser currentUser;
@@ -40,7 +43,6 @@ public class ActivityLogActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity_log);
 
-        jarFirestoreManager = new JarFirestoreManager();
         currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
         // Get Data from Intent
@@ -80,23 +82,29 @@ public class ActivityLogActivity extends BaseActivity {
         }
     }
 
+    /** Live feed: new deposits and joins appear without leaving the screen. */
     private void loadActivityLog() {
-        jarFirestoreManager.getTransactions(jarId, new JarFirestoreManager.FirestoreCallback<List<JarTransaction>>() {
-            @Override
-            public void onSuccess(List<JarTransaction> transactions) {
-                runOnUiThread(() -> displayTransactions(transactions));
-            }
+        activitySubscription = new FirestoreJarRepository().observeActivity(jarId,
+                new DataListener<List<JarTransaction>>() {
+                    @Override
+                    public void onData(List<JarTransaction> transactions) {
+                        displayTransactions(transactions);
+                    }
 
-            @Override
-            public void onFailure(Exception e) {
-                Log.e(TAG, "Error loading transactions", e);
-                runOnUiThread(() -> {
-                    messageView.setText("Error loading activity log: " + e.getMessage());
-                    messageView.setVisibility(View.VISIBLE);
-                    recyclerView.setVisibility(View.GONE);
+                    @Override
+                    public void onError(Exception e) {
+                        Log.w(TAG, "Error loading activity log", e);
+                        messageView.setText("Couldn't load the activity log. Check your connection.");
+                        messageView.setVisibility(View.VISIBLE);
+                        recyclerView.setVisibility(View.GONE);
+                    }
                 });
-            }
-        });
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (activitySubscription != null) activitySubscription.cancel();
+        super.onDestroy();
     }
 
     private void displayTransactions(List<JarTransaction> transactions) {
@@ -205,7 +213,7 @@ public class ActivityLogActivity extends BaseActivity {
             holder.tvTitle.setText(titleText);
 
             // Set Note if it exists and is meaningful
-            if (note != null && !note.isEmpty() && !note.equals("Added money to jar") && !type.equals("ADD_PARTICIPANT")) {
+            if (note != null && !note.isEmpty() && !note.equals("Added money to jar") && !"ADD_PARTICIPANT".equals(type)) {
                 holder.tvNote.setVisibility(View.VISIBLE);
                 holder.tvNote.setText("Note: " + note);
             } else {

@@ -189,27 +189,6 @@ public class JarFirestoreManager {
                 );
     }
 
-    // Get transactions for a jar
-    public void getTransactions(String jarId, FirestoreCallback<List<JarTransaction>> callback) {
-        transactionsCollection
-                .whereEqualTo("jarId", jarId)
-                .orderBy("timestamp", Query.Direction.DESCENDING)
-                .limit(50)
-                .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
-                    List<JarTransaction> transactionList = new ArrayList<>();
-                    for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
-                        JarTransaction transaction = document.toObject(JarTransaction.class);
-                        transactionList.add(transaction);
-                    }
-                    callback.onSuccess(transactionList);
-                })
-                .addOnFailureListener(e -> {
-                    Log.e(TAG, "Error getting transactions", e);
-                    callback.onFailure(e);
-                });
-    }
-
     /**
      * Invite a user to a shared jar (owner only, enforced by Firestore rules).
      * The participant, their contribution entry, their invite notification and the activity

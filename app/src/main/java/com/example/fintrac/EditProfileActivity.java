@@ -51,13 +51,47 @@ public class EditProfileActivity extends BaseActivity {
 
     private final ActivityResultLauncher<String> pickMedia =
             registerForActivityResult(new ActivityResultContracts.GetContent(), uri -> {
-                if (uri != null) {
-                    selectedImageUri = uri;
-                    selectedAvatarName = null;
-                    loadProfileImage(uri, null);
-                    Toast.makeText(this, "Image selected", Toast.LENGTH_SHORT).show();
-                }
+                if (uri != null) copyPickedPhoto(uri);
             });
+
+    /**
+     * The gallery's content:// link only works until the app closes, so the photo is copied
+     * into app-private storage and that file is what gets saved.
+     */
+    private void copyPickedPhoto(Uri source) {
+        java.util.concurrent.Executors.newSingleThreadExecutor().execute(() -> {
+            java.io.File dir = new java.io.File(getFilesDir(), "profile");
+            java.io.File target = new java.io.File(dir, "photo_" + System.currentTimeMillis() + ".jpg");
+            try {
+                if (!dir.exists() && !dir.mkdirs()) throw new java.io.IOException("No profile dir");
+                try (java.io.InputStream in = getContentResolver().openInputStream(source);
+                     java.io.OutputStream out = new java.io.FileOutputStream(target)) {
+                    if (in == null) throw new java.io.IOException("Unreadable image");
+                    byte[] buffer = new byte[8192];
+                    int n;
+                    while ((n = in.read(buffer)) > 0) out.write(buffer, 0, n);
+                }
+                // Keep only the newest photo
+                java.io.File[] old = dir.listFiles();
+                if (old != null) {
+                    for (java.io.File f : old) {
+                        if (!f.equals(target)) f.delete();
+                    }
+                }
+                Uri saved = Uri.fromFile(target);
+                runOnUiThread(() -> {
+                    selectedImageUri = saved;
+                    selectedAvatarName = null;
+                    loadProfileImage(saved, null);
+                    Toast.makeText(this, "Image selected", Toast.LENGTH_SHORT).show();
+                });
+            } catch (Exception e) {
+                Log.w("EditProfile", "Couldn't copy picked photo", e);
+                target.delete();
+                runOnUiThread(() -> Toast.makeText(this, "Couldn't use that image", Toast.LENGTH_SHORT).show());
+            }
+        });
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,16 +103,34 @@ public class EditProfileActivity extends BaseActivity {
         mAuth = FirebaseAuth.getInstance();
 
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            userID = currentUser.getUid();
-        } else {
-            userID = "guest_user";
+        if (currentUser == null) {
+            finish(); // Only reachable while signed in
+            return;
         }
+        userID = currentUser.getUid();
 
         initViews();
         setupGenderSpinner();
-        loadExistingProfile();
+        // Load once. (It used to reload on every resume, which wiped unsaved edits and undid
+        // a just-picked gallery photo, since returning from the picker triggers a resume.)
+        if (savedInstanceState == null) {
+            loadExistingProfile();
+        } else {
+            String uri = savedInstanceState.getString("photo_uri");
+            selectedImageUri = uri != null ? Uri.parse(uri) : null;
+            selectedAvatarName = savedInstanceState.getString("avatar_name");
+            Integer avatarRes = selectedAvatarName != null
+                    ? getResources().getIdentifier(selectedAvatarName, "drawable", getPackageName()) : null;
+            loadProfileImage(selectedImageUri, selectedImageUri == null ? avatarRes : null);
+        }
         setupListeners();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (selectedImageUri != null) outState.putString("photo_uri", selectedImageUri.toString());
+        if (selectedAvatarName != null) outState.putString("avatar_name", selectedAvatarName);
     }
 
     private void initViews() {
@@ -371,11 +423,5 @@ public class EditProfileActivity extends BaseActivity {
                     btnSaveProfile.setText("Save Changes");
                     Log.e("EditProfile", "Firestore save error", e);
                 });
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        loadExistingProfile();
     }
 }
