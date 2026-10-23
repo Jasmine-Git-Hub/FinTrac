@@ -19,7 +19,7 @@ import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class ChangePasswordActivity extends AppCompatActivity {
+public class ChangePasswordActivity extends BaseActivity {
 
     private ImageView btnBack;
     private TextInputEditText etCurrentPassword, etNewPassword, etConfirmPassword;
@@ -49,6 +49,18 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
         // 2. Back Button Action
         btnBack.setOnClickListener(v -> finish());
+
+        // Google sign-in accounts have no FinTrac password to change
+        if (!hasPasswordLogin(mAuth.getCurrentUser())) {
+            etCurrentPassword.setEnabled(false);
+            etNewPassword.setEnabled(false);
+            etConfirmPassword.setEnabled(false);
+            btnUpdatePassword.setEnabled(false);
+            btnUpdatePassword.setText("Managed by Google");
+            Toast.makeText(this, "You sign in with Google, so your password is managed in your Google account.",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
 
         // 3. Setup real-time password validation
         setupPasswordValidation();
@@ -273,5 +285,13 @@ public class ChangePasswordActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "No authenticated user found. Please log in again.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private static boolean hasPasswordLogin(FirebaseUser user) {
+        if (user == null) return false;
+        for (com.google.firebase.auth.UserInfo info : user.getProviderData()) {
+            if (EmailAuthProvider.PROVIDER_ID.equals(info.getProviderId())) return true;
+        }
+        return false;
     }
 }
