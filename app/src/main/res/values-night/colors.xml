@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_dark">#0F1115</color>
+    <color name="surface_dark">#1A1D24</color>
+    <color name="text_primary_dark">#F5F5F5</color>
+    <color name="text_secondary_dark">#9EA3AE</color>
+
+    <color name="page_background">@color/background_dark</color>
+    <color name="card_background">@color/surface_dark</color>
+    <color name="text_primary">@color/text_primary_dark</color>
+    <color name="text_secondary">@color/text_secondary_dark</color>
+    <color name="text_hint">#809EA3AE</color>
+    <color name="input_field_bg">#252932</color>
+
+    <color name="challenge_bg">@color/background_dark</color>
+    <color name="surface_summary_active">#1E2A3B</color>
+    <color name="surface_summary_saved">#2D1B45</color>
+    <color name="surface_quick_start">@color/surface_dark</color>
+    <color name="surface_challenge_item">@color/surface_dark</color>
+
+    <color name="summary_due_bg">#1E2A3B</color>
+    <color name="summary_paid_bg">#2D1B1B</color>
+    <color name="category_bg">#2D1B45</color>
+
+    <color name="text_summary_active">#4DA8DA</color>
+    <color name="text_summary_saved">#BB86FC</color>
+
+    <color name="background_light">@color/background_dark</color>
+    <color name="surface_light">@color/surface_dark</color>
+
+    <color name="white">@color/surface_dark</color>
+    <color name="black">#FFFFFF</color>
+    <color name="gray">@color/text_secondary_dark</color>
+    <color name="light_gray">#252932</color>
+    <color name="dark_blue">#FFFFFF</color>
+    <color name="blue">#64B5F6</color>
+
+    <!-- Theme colors needed for the app -->
+    <color name="ocean_blue">#2196F3</color>
+    <color name="forest_green">#4CAF50</color>
+    <color name="royal_purple">#9C27B0</color>
+    <color name="sunset_orange">#FF9800</color>
+    <color name="warning_color">#F57C00</color>
+    <color name="warning_bg">#FFF3E0</color>
+</resources>

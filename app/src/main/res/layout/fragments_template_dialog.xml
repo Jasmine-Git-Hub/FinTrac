@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="24dp"
+    app:cardBackgroundColor="@color/card_background"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/start_challenge"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_close"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                app:tint="@color/text_secondary"
+                android:contentDescription="@string/close_button_desc"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_tab_background"
+            android:padding="4dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tab_templates"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Templates"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                app:backgroundTint="#FF9800"
+                app:cornerRadius="20dp"
+                app:elevation="0dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tab_custom"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="Custom"
+                android:textColor="#757575"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                app:backgroundTint="#E0E0E0"
+                app:cornerRadius="20dp"
+                app:elevation="0dp"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_challenges"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="8dp"
+                android:visibility="visible"/>
+
+            <ScrollView
+                android:id="@+id/sv_custom_form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Challenge Name"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_challenge_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="e.g., No Shopping Week"
+                        android:layout_marginBottom="12dp"
+                        android:background="@android:color/transparent"
+                        android:paddingVertical="12dp"
+                        android:textColor="@color/text_primary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Duration (days)"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_duration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="7"
+                        android:inputType="number"
+                        android:layout_marginBottom="12dp"
+                        android:background="@android:color/transparent"
+                        android:paddingVertical="12dp"
+                        android:textColor="@color/text_primary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Target Amount (₱)"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_target_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="5000"
+                        android:inputType="numberDecimal"
+                        android:background="@android:color/transparent"
+                        android:paddingVertical="12dp"
+                        android:textColor="@color/text_primary"/>
+
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_start_challenge"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/start_challenge"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FF9800"
+            app:cornerRadius="12dp"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

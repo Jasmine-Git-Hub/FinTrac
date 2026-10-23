@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.FinTrac.OceanBlue" parent="Theme.FinTrac">
+        <item name="colorPrimary">@color/ocean_blue</item>
+        <item name="colorPrimaryVariant">@color/ocean_blue_dark</item>
+        <item name="android:statusBarColor">@color/ocean_blue</item>
+    </style>
+
+    <style name="Theme.FinTrac.ForestGreen" parent="Theme.FinTrac">
+        <item name="colorPrimary">@color/forest_green</item>
+        <item name="colorPrimaryVariant">@color/forest_green_dark</item>
+        <item name="android:statusBarColor">@color/forest_green</item>
+    </style>
+
+    <style name="Theme.FinTrac.RoyalPurple" parent="Theme.FinTrac">
+        <item name="colorPrimary">@color/royal_purple</item>
+        <item name="colorPrimaryVariant">@color/royal_purple_dark</item>
+        <item name="android:statusBarColor">@color/royal_purple</item>
+    </style>
+
+    <style name="Theme.FinTrac.SunsetOrange" parent="Theme.FinTrac">
+        <item name="colorPrimary">@color/sunset_orange</item>
+        <item name="colorPrimaryVariant">@color/sunset_orange_dark</item>
+        <item name="android:statusBarColor">@color/sunset_orange</item>
+    </style>
+
+    <style name="Base.Theme.FinTrac" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/ocean_blue</item>
+        <item name="colorPrimaryVariant">@color/ocean_blue_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/forest_green</item>
+        <item name="colorSecondaryVariant">@color/forest_green_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <item name="android:colorBackground">@color/page_background</item>
+        <item name="colorSurface">@color/card_background</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <item name="android:navigationBarColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Theme.FinTrac" parent="Base.Theme.FinTrac" />
+
+    <style name="Widget.App.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">?attr/colorPrimary</item>
+        <item name="android:width">64dp</item>
+        <item name="android:height">32dp</item>
+    </style>
+
+    <style name="AppDialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AvatarGridItem">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@color/page_background">
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@android:drawable/ic_dialog_email"
+        android:layout_marginBottom="24dp"
+        app:tint="#F29900" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verification Code"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We have sent a 6-digit code to your email address."
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="24dp"
+        android:paddingHorizontal="16dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter 6-Digit OTP"
+        app:boxCornerRadiusTopStart="16dp"
+        app:boxCornerRadiusTopEnd="16dp"
+        app:boxCornerRadiusBottomStart="16dp"
+        app:boxCornerRadiusBottomEnd="16dp"
+        app:boxStrokeColor="#F29900"
+        app:hintTextColor="#F29900">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_otp_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="6"
+            android:letterSpacing="0.8"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:textAlignment="center"
+            android:paddingVertical="16dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Checkbox for OTP verification preference -->
+    <CheckBox
+        android:id="@+id/cb_save_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Remember this device for 3 days (skip OTP verification on future logins)"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:buttonTint="#F29900"
+        android:checked="true" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_verify_otp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Verify and Login"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#F29900"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Didn't receive the code? "
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_resend_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend"
+            android:textStyle="bold"
+            android:textColor="#F29900"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+</LinearLayout>

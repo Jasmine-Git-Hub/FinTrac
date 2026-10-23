@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FinTrac</string>
+    <string name="welcome_to_fintrac">Welcome to FinTrac</string>
+    <string name="your_smart_finance_manager">Your Smart Finance Manager</string>
+    <string name="track_expenses">Track Expenses</string>
+    <string name="monitor_your_spending_in_real_time">Monitor your spending in real-time</string>
+    <string name="smart_savings">Smart Savings</string>
+    <string name="reach_your_financial_goals_faster">Reach your financial goals faster</string>
+    <string name="visual_reports">Visual Reports</string>
+    <string name="understand_your_money_better">Understand your money better</string>
+    <string name="secure_safe">Secure &amp; Safe</string>
+    <string name="your_data_is_always_protected">Your data is always protected</string>
+    <string name="get_started">Get Started</string>
+    <string name="i_already_have_an_account">I Already Have an Account</string>
+    <string name="back">Back</string>
+    <string name="create_account">Create Account</string>
+    <string name="join_us_and_start_managing_your_finances_smarter">Join us and start managing your finances smarter</string>
+    <string name="full_name">Full Name</string>
+    <string name="john_doe">John Doe</string>
+    <string name="email_address">Email Address</string>
+    <string name="you_at_example_com">you@example.com</string>
+    <string name="password">Password</string>
+    <string name="create_a_password">Create a password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_your_password">Confirm your password</string>
+    <string name="i_agree_to_the_terms_conditions_and_privacy_policy">I agree to the Terms &amp; Conditions and Privacy Policy</string>
+    <string name="or_sign_up_with">Or sign up with</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="already_have_an_account_sign_in">Already have an account? Sign In</string>
+    <string name="i_have_an_account_sign_in">I have an account? Sign in</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- My Jars Screen -->
+    <string name="my_jars">My Jars</string>
+    <string name="manage_your_saving_goals">Manage your saving goals</string>
+    <string name="all">All</string>
+    <string name="mandatory">Mandatory</string>
+    <string name="flexible">Flexible</string>
+    <string name="shared">Shared</string>
+    <string name="total_saved">Total Saved</string>
+    <string name="total_goals">Total Goals</string>
+    <string name="tuition_fee">Tuition Fee</string>
+    <string name="rent">Rent</string>
+    <string name="php_3_500">₱3,500</string>
+    <string name="php_25_000">₱25,000</string>
+    <string name="php_2_000">₱2,000</string>
+    <string name="php_8_000">₱8,000</string>
+    <string name="fourteen_percent_complete">14%% complete</string>
+    <string name="twenty_five_percent_complete">25%% complete</string>
+    <string name="days_left_344">-344 days left</string>
+    <string name="days_left_15">-15 days left</string>
+    <string name="php_3000_week">₱3000/week</string>
+    <string name="php_2000_week">₱2000/week</string>
+    <string name="total_saved_amount">₱11,700</string>
+    <string name="total_goals_amount">₱68,000</string>
+    <string name="add_jar">Add new jar</string>
+    <string name="currency_format">₱%s</string>
+    <string name="jar_icon_description">Jar icon</string>
+
+    <!-- Create Jar Dialog -->
+    <string name="create_new_jar">Create New Jar</string>
+    <string name="jar_name">Jar Name</string>
+    <string name="bill_name_hint">e.g. Electric Bill</string>
+    <string name="jar_name_hint">e.g., Tuition Fee, New Laptop</string>
+    <string name="jar_type">Jar Type</string>
+    <string name="target_amount">Target Amount (P)</string>
+    <string name="target_amount_hint">5000</string>
+    <string name="deadline_optional">Deadline (Optional)</string>
+    <string name="deadline_hint">mm/dd/yyyy</string>
+    <string name="choose_icon">Choose Icon</string>
+    <string name="choose_color">Choose Color</string>
+    <string name="create_jar">CREATE JAR</string>
+    <string name="jar_name_required">Jar name is required</string>
+    <string name="target_amount_required">Target amount is required</string>
+    <string name="fragment_not_found">Fragment not found</string>
+    <string name="desc_icon_selection">Select an icon for your jar</string>
+    <string name="gift_icon_desc">Gift icon</string>
+    <string name="desc_color_selection">Choose a color for your jar</string>
+    <string name="custom_color_desc">Custom color</string>
+
+    <!-- Dashboard Screen -->
+    <string name="welcome_user">Welcome, %1$s</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="welcome_text_home">Welcome back!</string>
+    <string name="default_username">John Doe</string>
+    <string name="total_balance">Total Balance</string>
+    <string name="spendable">Spendable</string>
+    <string name="in_jars">In Jars</string>
+    <string name="unpaid_bills">Unpaid Bills</string>
+    <string name="php_5_000">₱5,000</string>
+    <string name="php_0">₱0</string>
+    <string name="of_php_0">of ₱0</string>
+    <string name="of_zero_placeholder">of ₱0</string>
+    <string name="zero_pending">0 pending</string>
+    <string name="weekly_spending">Weekly Spending</string>
+    <string name="bar_chart_placeholder">A placeholder for the weekly spending bar chart</string>
+    <string name="recent_activity">Recent Activity</string>
+    <string name="no_transactions_yet">No transactions yet</string>
+    <string name="add_transaction">Add Transaction</string>
+    <string name="add_transaction_desc">Add transaction</string>
+    <string name="currency_placeholder">₱0.00</string>
+    <string name="currency_zero">₱0</string>
+
+    <!-- Transaction/Bill Dialogs -->
+    <string name="new_transaction">New Transaction</string>
+    <string name="add_new_bill">Add New Bill</string>
+    <string name="add_bill">Add Bill</string>
+    <string name="bill_name">Bill Name</string>
+    <string name="amount">Amount</string>
+    <string name="amount_hint">0.00</string>
+    <string name="due_date">Due Date</string>
+    <string name="due">Due</string>
+    <string name="category">Category</string>
+    <string name="recurring_bill">Recurring Bill</string>
+    <string name="billing_frequency">Billing Frequency</string>
+    <string name="reminder_before_due_date">Remind me before due date</string>
+    <string name="transaction_type">Transaction Type</string>
+    <string name="expense">Expense</string>
+    <string name="income">Income</string>
+    <string name="description">Description</string>
+    <string name="description_hint">What was this for?</string>
+    <string name="add_expense">Add Expense</string>
+    <string name="add_income">Add Income</string>
+    <string name="food">Food</string>
+    <string name="enter_amount_to_contribute">Enter amount to contribute:</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+
+    <!-- Settings Screen -->
+    <string name="settings">Settings</string>
+    <string name="appearance">Appearance</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="theme_color">Theme Color</string>
+    <string name="ocean_blue">Ocean Blue</string>
+    <string name="forest_green">Forest Green</string>
+    <string name="royal_purple">Royal Purple</string>
+    <string name="sunset_orange">Sunset Orange</string>
+    <string name="currency">Currency</string>
+    <string name="currency_usd">US Dollar</string>
+    <string name="usd">USD</string>
+    <string name="currency_eur">Euro</string>
+    <string name="EUR">EUR</string>
+    <string name="currency_php">Philippine Peso</string>
+    <string name="PHP">PHP</string>
+    <string name="currency_gbp">British Pound</string>
+    <string name="GBP">GBP</string>
+    <string name="currency_jpy">Japanese Yen</string>
+    <string name="JPY">JPY</string>
+    <string name="currency_inr">Indian Rupee</string>
+    <string name="INR">INR</string>
+    <string name="close">Close</string>
+
+    <!-- Shared Jars Details -->
+    <string name="shared_jar">Shared Jar</string>
+    <string name="jar_icon_desc">Jar icon</string>
+    <string name="baguio_trip">Baguio Trip</string>
+    <string name="budget_amount">/₱5,000</string>
+    <string name="progress_percentage">24% complete</string>
+    <string name="add_money">Add Money</string>
+    <string name="view_activity">View Activity</string>
+    <string name="participants">Participants</string>
+    <string name="invite">Invite</string>
+    <string name="content_desc_avatar_you">Your avatar</string>
+    <string name="you">You</string>
+    <string name="contributed_you">Contributed: ₱1,200</string>
+    <string name="suggested_you">Suggested ₱1,250</string>
+    <string name="content_desc_avatar_maria">Maria\'s avatar</string>
+    <string name="maria">Maria</string>
+    <string name="contributed_maria">Contributed: ₱1,000</string>
+    <string name="suggested_maria">Suggested ₱1,250</string>
+    <string name="content_desc_avatar_juan">Juan\'s avatar</string>
+    <string name="juan">Juan</string>
+    <string name="contributed_juan">Contributed: ₱800</string>
+    <string name="suggested_juan">Suggested ₱1,250</string>
+    <string name="content_desc_avatar_sofia">Sofia\'s avatar</string>
+    <string name="sofia">Sofia</string>
+    <string name="contributed_sofia">Contributed: ₱0</string>
+    <string name="suggested_sofia">Suggested ₱1,250</string>
+    <string name="progress_suggestion">Based on current progress, each member should contribute ₱1,250 to reach the goal equally.</string>
+    <string name="goal_amount_format">/ %1$s</string>
+    <string name="progress_complete_format">%1$d%% complete</string>
+
+    <!-- Challenges Screen -->
+    <string name="saving_challenges">Saving Challenges</string>
+    <string name="gamify_your_savings">Gamify your savings</string>
+    <string name="add_challenge_desc">Add a new challenge</string>
+    <string name="active">Active</string>
+    <string name="saved_total">Saved Total</string>
+    <string name="quick_start">Quick Start</string>
+    <string name="no_cafe_week">No-Café Week</string>
+    <string name="daily_20p">Daily 20₱</string>
+    <string name="active_challenges">Active Challenges</string>
+    <string name="day_3">Day 3</string>
+    <string name="seven_days">7 days</string>
+    <string name="four_days_left">4 days left</string>
+    <string name="one_percent_done">1%% done</string>
+
+    <!-- Start a Challenge Templates -->
+    <string name="start_a_challenge">Start a Challenge</string>
+    <string name="templates">Templates</string>
+    <string name="custom">Custom</string>
+    <string name="no_cafe_desc">Skip coffee shop visits for 7 days</string>
+    <string name="save_amount_350">Save ₱350</string>
+    <string name="twenty_pesos_daily_challenge">20 Pesos Daily Challenge</string>
+    <string name="save_20_desc">Save 20 pesos every day for 30 days</string>
+    <string name="save_amount_600">Save ₱600</string>
+    <string name="no_takeout_challenge">No-Takeout Challenge</string>
+    <string name="no_takeout_desc">Cook all meals at home for 14 days</string>
+    <string name="fourteen_days">14 days</string>
+    <string name="save_amount_700">Save ₱700</string>
+    <string name="fifty_pesos_daily_challenge">50 Pesos Daily Challenge</string>
+    <string name="save_50_desc">Save 50 pesos every day for 30 days</string>
+    <string name="save_amount_1500">Save ₱1500</string>
+    <string name="start_challenge">Start Challenge</string>
+    <string name="thirty_days">30 days</string>
+
+    <!-- Custom Challenge Dialog Strings -->
+    <string name="challenge_name_label">Challenge Name</string>
+    <string name="challenge_name_hint">e.g., No Shopping Week</string>
+    <string name="duration_label">Duration (days)</string>
+    <string name="duration_hint">7</string>
+    <string name="target_amount_label">Target Amount (₱)</string>
+
+    <!-- Content Descriptions -->
+    <string name="close_button_desc">Close</string>
+    <string name="hat_icon_desc">Hat icon</string>
+    <string name="house_icon_desc">House icon</string>
+    <string name="airplane_icon_desc">Airplane icon</string>
+    <string name="laptop_icon_desc">Laptop icon</string>
+    <string name="car_icon_desc">Car icon</string>
+    <string name="controller_icon_desc">Game controller icon</string>
+    <string name="cloth_icon_desc">Cloth icon</string>
+    <string name="book_icon_desc">Book icon</string>
+    <string name="burger_icon_desc">Burger icon</string>
+    <string name="red_color_desc">Red color</string>
+    <string name="orange_color_desc">Orange color</string>
+    <string name="yellow_color_desc">Yellow color</string>
+    <string name="green_color_desc">Green color</string>
+    <string name="blue_color_desc">Blue color</string>
+    <string name="purple_color_desc">Purple color</string>
+    <string name="pink_color_desc">Pink color</string>
+    <string name="history_title">History</string>
+    <string name="transactions_count">%1$d transactions</string>
+    <string name="filter_all">All</string>
+    <string name="filter_income">Income</string>
+    <string name="filter_expense">Expense</string>
+    <string name="button_export">Export</string>
+    <string name="button_share">Share</string>
+    <string name="empty_history">No transactions yet</string>
+    <string name="bill_logo_desc">Bill Logo</string>
+
+    <string-array name="transaction_categories">
+        <item>Food</item>
+        <item>Transport</item>
+        <item>Shopping</item>
+        <item>Entertainment</item>
+        <item>Health</item>
+        <item>Education</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="frequency_options">
+        <item>Weekly</item>
+        <item>Bi-Weekly</item>
+        <item>Monthly</item>
+        <item>Quarterly</item>
+        <item>Yearly</item>
+    </string-array>
+    <string name="logo_content_description">App Logo</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="toggle_password_visibility">Toggle password visibility</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or_continue_with">Or continue with</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="my_bills">My Bills</string>
+    <string name="track_your_upcoming_payments">Track your upcoming payments</string>
+    <string name="total_due">Total Due</string>
+    <string name="total_paid">Total Paid</string>
+    <string name="subscription">Subscription</string>
+    <string name="loans">Loans</string>
+    <string name="netflix">Netflix</string>
+    <string name="two_hundred_seventy_nine">₱279</string>
+    <string name="activity_log_title">%s Activity Log</string>
+    <string name="add_money_to">Add Money to %s</string>
+    <string name="error_enter_amount">Please enter an amount</string>
+    <string name="error_valid_number">Please enter a valid number</string>
+    <string name="error_amount_positive">Amount must be greater than 0</string>
+    <!-- Invite Dialog Strings -->
+    <string name="invite_to_jar">Invite to %s</string>
+    <string name="invitation_sent_to">Invitation sent to %s</string>
+    <string name="error_enter_valid_email">Please enter a valid email address</string>
+    <string name="share_jar_invitation">Join my \"%s\" savings jar! Use this link to contribute: %s</string>
+    <string name="share_via">Share via</string>
+    <string name="create_custom_challenge">Create Custom Challenge</string>
+    <string name="day_progress_template">Day %1$d / %2$d</string>
+    <string name="completed">Completed</string>
+    <string name="not_started">Not Started</string>
+    <string name="give_up_title">Give Up Challenge</string>
+    <string name="give_up_message">Are you sure you want to give up this challenge?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="save_amount_over_days">Save ₱%1$.1f over %2$d days</string>
+    <string name="percent_format">%1$d%%</string>
+    <string name="day_progress_format">Day %1$d / %2$d</string>
+    <string name="challenge_details">Challenge Details</string>
+    <string name="days_left">Days Left:</string>
+    <string name="total_days">Total Days:</string>
+    <string name="daily_check_in">Daily Check-in</string>
+    <string name="day_completed">Day completed</string>
+    <string name="check_in">Check-in</string>
+    <string name="give_up_challenge">Give Up Challenge</string>
+
+    <!-- If you need placeholders for dynamic values -->
+    <string name="save_amount_placeholder">Save ₱500.0 over 7 days</string>
+    <string name="days_left_placeholder">4</string>
+    <string name="total_days_placeholder">7</string>
+    <string name="percent_placeholder">42%</string>
+    <string name="days_completed_counter">0</string>
+    <string name="challenge_description_no_cafe">Skip coffee shop visits for 7 days</string>
+    <string name="progress_percent_placeholder">1%</string>
+    <string name="day_progress_placeholder">Day 3 / 7</string>
+    <string name="total_days_colon">Total Days:</string>
+    <string name="days_left_colon">Days Left:</string>
+    <!-- For ChallengeAdapter -->
+    <string name="checked_in_success">Checked in for today! Progress updated.</string>
+    <string name="challenge_already_completed">Challenge already completed!</string>
+    <string name="give_up_confirmation">Are you sure you want to give up this challenge?</string>
+    <string name="challenge_given_up">Challenge given up</string>
+    <string name="challenge_name">Challenge Name</string>
+    <string name="duration_days">Duration (days)</string>
+    <!-- Error messages for CustomChallengeDialogFragment -->
+    <string name="error_challenge_name_required">Please enter a challenge name</string>
+    <string name="error_duration_required">Please enter duration</string>
+    <string name="error_amount_required">Please enter target amount</string>
+    <string name="error_duration_positive">Duration must be greater than 0</string>
+    <string name="error_invalid_number">Invalid number</string>
+    <string name="error_invalid_amount">Invalid amount</string>
+    <string name="error_listener_not_set">Error: Listener not set</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="close_dialog">Close dialog</string>
+    <string name="enter_bill_name">Enter bill name</string>
+    <string name="enter_amount">Enter amount</string>
+    <string name="select_date">Select due date</string>
+    <string name="save">Save Changes</string>
+    <string name="label_complete">Complete</string>
+    <string name="label_current_progress">Current Progress</string>
+    <string name="label_days_left">Days Left</string>
+    <string name="label_total_goal">Total Goal</string>
+    <string name="btn_check_in_today">Check In Today</string>
+
+    <string name="placeholder_percent">0%</string>
+    <string name="placeholder_days">0</string>
+    <string name="placeholder_day_progress">Day 0 / 0</string>
+    <string name="color_red">Red</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_green">Green</string>
+    <string name="color_purple">Purple</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_teal">Teal</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_indigo">Indigo</string>
+    <string name="color_black">Black</string>
+
+    <!-- For custom challenge description -->
+    <string name="custom_challenge_description">Custom challenge: %s</string>
+    <!-- Sign In Activity Strings -->
+    <string name="creating_account">Creating account…</string>
+    <string name="registration_successful">Registration successful!</string>
+    <string name="account_created_profile_failed">Account created but failed to update profile</string>
+    <string name="account_created_data_failed">Account created but failed to save user data: </string>
+    <string name="verification_email_sent">Verification email sent to</string>
+
+    <!-- Error Messages -->
+    <string name="error_email_required">Email is required</string>
+    <string name="error_valid_email">Enter a valid email</string>
+    <string name="error_name_required">Full name is required</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_password_length">Password must be at least 6 characters</string>
+    <string name="error_confirm_password">Please confirm your password</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="error_terms_required">Please accept the terms and conditions</string>
+    <string name="error_registration_failed">Registration failed</string>
+    <string name="error_email_in_use">This email is already registered. Please use a different email or sign in.</string>
+    <string name="error_weak_password">Password is too weak. Please use a stronger password.</string>
+    <string name="error_network">Network error. Please check your internet connection.</string>
+    <string name="error_invalid_email">Invalid email format.</string>
+    <string name="error_unknown">Unknown error</string>
+    <!-- HomeFragment Strings -->
+    <string name="welcome">Welcome!</string>
+    <string name="guest">Guest</string>
+    <string name="logout">Logout</string>
+    <string name="logout_confirmation">Are you sure you want to logout?</string>
+    <string name="sun">Sun</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+
+    <!-- Transaction Dialog Strings -->
+    <string name="select_category">Please select a category</string>
+    <string name="user_not_authenticated">User not authenticated</string>
+    <string name="saving">Saving,,,</string>
+    <string name="transaction_saved">Transaction saved successfully</string>
+    <string name="save_failed">Failed to save transaction: </string>
+    <string name="invalid_amount">Invalid amount format</string>
+    <!-- Category strings -->
+    <string name="transportation">Transportation</string>
+    <string name="bills">Bills</string>
+    <string name="shopping">Shopping</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="health">Health</string>
+    <string name="education">Education</string>
+    <string name="other">Other</string>
+
+    <!-- SharedJarsDetails Strings -->
+    <string name="user_number">User %d</string>
+    <string name="suggested_format">Suggested: %s</string>
+    <string name="goal_format">/ %s</string>
+    <string name="percent_complete">%d%% complete</string>
+    <string name="add_to_jar_title">Add to %s</string>
+    <string name="error_valid_amount">Please enter a valid amount</string>
+    <string name="only_needed_format">Only %s needed to complete the goal!</string>
+    <string name="added_format">Added %s</string>
+    <string name="error_adding_money">Error adding money: %s</string>
+    <string name="invite_to_jar_title">Invite to %s</string>
+    <string name="invitation_sent_format">Invitation sent to %s</string>
+    <string name="error_format">Error: %s</string>
+    <string name="error_valid_email_required">Valid email is required</string>
+    <string name="join_my_jar">Join my jar: %s</string>
+    <string name="invite_message">Join my savings jar \'%s\' on Fintrac!\n\nGoal: %s\nCurrent: %s\n\nDownload Fintrac to start saving together!</string>
+    <string name="congratulations">🎉 Congratulations!</string>
+    <string name="goal_reached_message">You\'ve reached your goal for %s!\nGreat job saving together!</string>
+    <string name="awesome">Awesome!</string>
+    <string name="view_participants">View Participants</string>
+    <string name="just_now">Just now</string>
+    <string name="plus_format">+ %s</string>
+    <string name="user_with_you">%s (You)</string>
+    <string name="error_loading_jar">Error loading jar details: %s</string>
+    <string name="deadline">Deadline</string>
+    <string name="target_amount_short">Target (₱)</string>
+
+    <string name="desc_icon_education">Education Icon</string>
+    <string name="desc_icon_house">House Icon</string>
+    <string name="desc_icon_travel">Travel Icon</string>
+    <string name="desc_icon_gadget">Gadget Icon</string>
+    <string name="desc_icon_car">Car Icon</string>
+    <string name="desc_icon_game">Gaming Icon</string>
+    <string name="desc_icon_clothing">Clothing Icon</string>
+    <string name="desc_icon_books">Books Icon</string>
+    <string name="desc_icon_food">Food Icon</string>
+    <string name="desc_icon_gift">Gift Icon</string>
+
+    <string name="desc_color_red">Red Color</string>
+    <string name="desc_color_blue">Blue Color</string>
+    <string name="desc_color_green">Green Color</string>
+    <string name="desc_color_purple">Purple Color</string>
+    <string name="desc_color_orange">Orange Color</string>
+    <string name="desc_color_teal">Teal Color</string>
+    <string name="desc_color_pink">Pink Color</string>
+    <string name="desc_color_indigo">Indigo Color</string>
+    <string name="desc_color_black">Black Color</string>
+    <string name="desc_color_custom">Custom Color</string>
+    <string name="cd_currency">Currency Icon</string>
+    <string name="cd_arrow">Arrow Icon</string>
+    <string name="cd_moon">Dark Mode Icon</string>
+    <string name="cd_notif">Notification Icon</string>
+    <string name="cd_logout">Logout Icon</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="account">Account</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_password">Change Password</string>
+    <string name="selected_currency_default">Philippine Peso (PHP)</string>
+    <string name="tap_to_change_currency">Tap to change currency</string>
+    <string name="notifications">Notifications</string>
+    <string name="session">Session</string>
+    <string name="log_out">Log Out</string>
+
+    <string name="upcoming_bills">Upcoming Bills</string>
+    <string name="no_upcoming_bills">No upcoming bills</string>
+    <string name="view_all_bills">View All Bills</string>
+    <string name="paid">Paid</string>
+    <!-- Add these string resources to your strings.xml file -->
+    <string name="mark_as_paid">Mark as Paid</string>
+    <string name="mark_bill_paid_confirmation">Mark "%s" as paid?</string>
+    <string name="bill_marked_paid">Bill marked as paid</string>
+    <string name="failed_update_bill">Failed to update bill</string>
+    <string name="no_pending_bills">No pending bills</string>
+    <string name="one_pending_bill">1 pending bill</string>
+    <string name="pending_bills_count">%d pending bills</string>
+    <string name="of_amount">of %s</string>
+    <string name="user">User</string>
+    <string name="amount_format_negative">- %s</string>
+    <string name="amount_format_positive">+ %s</string>
+    <string name="suggestion_message">Suggested contribution: %s</string>
+    <string name="mark_all_read">Mark all as read</string>
+    <string name="no_notifications">No notifications yet</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="view">View</string>
+    <string name="weekly_amount_format">~%s/week</string>
+
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID_HERE</string>
+    <!-- About Section -->
+    <string name="version">Version 1.0.0</string>
+    <string name="about_description">FinTrac is a proactive, gamified personal finance application designed to transform budgeting from a reactive chore into an engaging experience. It helps users manage money through smart allocation jars, saving challenges, and visual progress tracking.</string>
+    <string name="features_list">• Smart Allocation Jars (Fixed, Shared, Custom)\n• Saving Spree Challenges &amp; Gamification\n• Bill Management &amp; Smart Reminders\n• Spendable Balance Dashboard\n• Progress Visualization &amp; Digital Jars\n• Multi-Currency Support\n• Offline Mode\n• Dark Mode &amp; Custom Themes</string>
+    <string name="users_list">• Students managing allowances\n• Young Professionals balancing salaries\n• Freelancers with variable income\n• Families coordinating shared expenses\n• Small Business Owners tracking costs</string>
+    <string name="lead_programmer">Espiritu, Jasmine Michaela Y. - Lead Programmer</string>
+    <string name="assistant_dev">Berdin, Mark Jelson - Assistant Developer</string>
+    <string name="copyright">© 2026 FinTrac. All rights reserved.\nData is stored locally on your device</string>
+    <string name="checked_in_today">Checked in today</string>
+    <string name="challenge_completed">Challenge Completed!</string>
+    <string name="error_showing_details">Error showing details</string>
+    <!-- Settings Fragment Strings -->
+    <string name="offline_mode">Offline Mode</string>
+    <string name="data_management">Data Management</string>
+    <string name="archives_and_delete">Archives &amp; Delete</string>
+    <string name="manage_archived_deleted">Manage archived and deleted items</string>
+    <string name="about">About</string>
+    <string name="app_name_full">FinTrac - Smart Finance Manager</string>
+    <string name="app_version">Version 1.0.5</string>
+    <string name="about_fintrac">About FinTrac</string>
+    <string name="about_fintrac_description">FinTrac is a comprehensive financial tracking application designed to help you manage your personal finances, track expenses, monitor income, and generate detailed financial reports.</string>
+    <string name="key_features">Key Features:</string>
+    <string name="key_features_list">• Track income and expenses\n• Multi-currency support\n• Budget planning and monitoring\n• Detailed financial reports\n• Data export capabilities\n• Offline mode support\n• Dark/Light theme options\n• Customizable color themes</string>
+    <string name="copyright_notice">© 2026 FinTrac. All rights reserved.</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_offline">Offline Mode Icon</string>
+    <string name="cd_archives">Archives and Delete Icon</string>
+    <string name="cd_about_icon">About Icon</string>
+
+    <!-- ===== OTP Verification Strings ===== -->
+    <string name="already_logged_in">You are already logged in</string>
+    <string name="otp_expired_request_new">Your OTP has expired. Please request a new one.</string>
+    <string name="otp_valid_for_days">Your OTP is valid for %d more day(s).</string>
+    <string name="verification_successful">Verification successful!</string>
+    <string name="invalid_otp_code">Invalid OTP code</string>
+    <string name="incorrect_otp_code">Incorrect OTP code</string>
+    <string name="new_otp_sent_expires_5_days">New OTP sent. Valid for 5 days.</string>
+    <string name="failed_send_otp_check_internet">Failed to send OTP. Check your internet connection.</string>
+    <string name="resend">Resend</string>
+    <string name="resend_in_seconds">Resend in %d s</string>
+    <!-- Edit Profile Activity -->
+    <string name="edit">Edit</string>
+    <string name="date_hint">MM/DD/YYYY</string>
+    <string name="gender">Gender</string>
+    <string name="job_title_hint">e.g., Software Engineer</string>
+    <string name="profile_icon_desc">Profile picture</string>
+    <string name="change_photo">Change Photo</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="job_title">Job Title</string>
+    <!-- Password Requirements -->
+    <string name="password_requirements_title">Password Requirements:</string>
+    <string name="req_length">✓ At least 8 characters</string>
+    <string name="req_uppercase">✓ At least one uppercase letter (A-Z)</string>
+    <string name="req_lowercase">✓ At least one lowercase letter (a-z)</string>
+    <string name="req_number">✓ At least one number (0–9)</string>
+    <string name="req_special">✓ At least one special character (!@#$%^&amp;* etc.)</string>
+
+    <!-- Password Match Messages -->
+    <string name="passwords_match">✓ Passwords match</string>
+    <string name="passwords_do_not_match">✗ Passwords do not match</string>
+
+    <!-- OTP Messages -->
+    <string name="verify">Verify</string>
+    <string name="email_verified_successfully">Email verified successfully!</string>
+    <string name="incorrect_otp">Incorrect OTP. Please try again.</string>
+    <string name="failed_to_send_otp">Failed to send OTP. Please check your email.</string>
+    <string name="verify_your_email">Verify your Email</string>
+    <string name="otp_message">We sent a 6-digit OTP to %s. Please enter it below.</string>
+    <string name="enter_6_digit_otp">Enter 6-digit OTP</string>
+    <string name="terms_acceptance_required">Please accept the Terms &amp; Conditions</string>
+
+        <!-- Subscription Activity Strings -->
+        <string name="explore_premium">Explore Premium</string>
+        <string name="choose_your_plan">Choose Your Plan</string>
+        <string name="core_experience">Core Experience</string>
+        <string name="free_tier">Free Tier</string>
+        <string name="price_free">₱0 / month</string>
+        <string name="current_plan">Current Plan</string>
+
+        <string name="premium_tier_1">Premium Tier 1</string>
+        <string name="student_flow_plus">Student Flow Plus</string>
+        <string name="price_student">₱149 / month</string>
+        <string name="upgrade_student">Upgrade to Student Plus</string>
+
+        <string name="premium_tier_2">Premium Tier 2</string>
+        <string name="professional_flow">Professional Flow</string>
+        <string name="price_professional">₱249 / month</string>
+        <string name="upgrade_professional">Upgrade to Professional</string>
+
+        <string name="premium_tier_3">Premium Tier 3</string>
+        <string name="family_team_flow">Family/Team Flow</string>
+        <string name="price_family">₱399 / month</string>
+        <string name="upgrade_family">Upgrade to Family/Team</string>
+
+        <!-- Features Strings - Using CDATA to handle special characters -->
+        <string name="free_features"><![CDATA[• Basic Smart Jars (limited)\n• Manual expense tracking\n• Basic bill reminders\n• Simple monthly charts\n• Limited saving challenges]]></string>
+
+        <string name="student_features"><![CDATA[• Unlimited Smart Jars\n• Automated allocations\n• Shared jars & full saving challenges\n• Advanced analytics and reports\n• Priority customer support]]></string>
+
+        <string name="professional_features"><![CDATA[• Everything in Student Flow Plus\n• AI-powered spending insights\n• Multi-currency support\n• Expense history with export options\n• Advanced bill management\n• Personalized financial goals dashboard]]></string>
+
+        <string name="family_features"><![CDATA[• Everything in Professional Flow\n• Multi-user access (family or team accounts)\n• Shared dashboards for household or SME expenses\n• Collaborative saving goals (family trips, team projects)\n• Role-based permissions (parents, admins, team leads)\n• Group notifications & reminders\n• Bulk expense tracking for SMEs]]></string>
+    <!-- Change Password Strings -->
+    <string name="password_change_instruction">Create a new strong password that you don\'t use for other websites.</string>
+    <string name="current_password">Current Password</string>
+    <string name="enter_current_password">Enter current password</string>
+    <string name="new_password">New Password</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="retype_new_password">Re-type new password</string>
+    <string name="update_password">Update Password</string>
+
+    <string name="zero_percent_of_balance">0% of total balance</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="weekly">Weekly</string>
+    <string name="see_more">See more</string>
+    <string name="remove">Remove</string>
+    <string name="sending">Sending...</string>
+        <string name="authenticating">Authenticating…</string>
+        <string name="sending_otp">Sending OTP…</string>
+        <string name="google_sign_in_failed">Google Sign-In failed: </string>
+        <string name="otp_send_failed">Failed to send OTP. Check your internet connection.</string>
+        <string name="account_locked">Account locked. Try again in </string>
+        <string name="account_locked_message">Too many failed attempts. Account locked for 5 minutes.</string>
+        <string name="attempts_left">attempts left</string>
+        <string name="email_required">Email is required</string>
+        <string name="valid_email">Enter a valid email</string>
+        <string name="password_required">Password is required</string>
+        <string name="login_failed">Login failed: </string>
+        <string name="invalid_credentials">Invalid email or password</string>
+        <string name="no_internet">No internet connection</string>
+        <string name="too_many_attempts">Too many failed attempts. Try again later.</string>
+        <string name="account_disabled">This account has been disabled.</string>
+        <string name="no_account">No account found with this email.</string>
+        <string name="invalid_email_format">Invalid email format.</string>
+        <string name="enter_valid_email">Please enter a valid email address</string>
+        <string name="reset_link_sent">Password reset link sent to:\n</string>
+        <string name="reset_email_failed">Failed to send reset email</string>
+        <string name="no_account_with_email">No account found with this email</string>
+        <string name="network_error">Network error. Check your connection.</string>
+
+    <string name="authenticating_with_google">Authenticating with Google…</string>
+    <string name="google_sign_in_success">Google Sign-In successful!</string>
+    <string name="show_paid_bills">Show Paid Bills.</string>
+
+    <!-- ===== Bills screen (Phase 2) ===== -->
+    <string name="bill_category_frequency">%1$s • %2$s</string>
+    <string name="bill_mark_paid">Mark %1$s as paid</string>
+    <string name="bill_mark_unpaid">Mark %1$s as unpaid</string>
+    <string name="bills_empty">No bills here yet.\nTap + to add your first bill.</string>
+    <string name="bills_empty_filtered">No bills match this filter.</string>
+    <string name="bills_show_paid">Show Paid Bills</string>
+    <string name="bills_hide_paid">Hide Paid Bills</string>
+    <string name="retry">Retry</string>
+
+    <!-- ===== Jars screen (Phase 2) ===== -->
+    <string name="jars_empty">No jars yet.\nTap + to start saving toward a goal.</string>
+    <string name="jars_empty_filtered">No jars of this type.</string>
+
+    <!-- ===== History screen (Phase 2) ===== -->
+    <string name="history_empty">No transactions yet.</string>
+    <string name="history_empty_filtered">Nothing in this category yet.</string>
+</resources>

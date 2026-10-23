@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    app:cardBackgroundColor="@color/card_background"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dialog_icon_card"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/page_background"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:id="@+id/iv_dialog_bill_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/ic_visual_reports" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_dialog_bill_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bill Name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:id="@+id/tv_dialog_bill_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₱0.00"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tv_dialog_due_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Due Date"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/circle"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"/>
+                <TextView
+                    android:id="@+id/tv_dialog_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subscriptions"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Frequency"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary"/>
+                <TextView
+                    android:id="@+id/tv_dialog_frequency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dialog_mark_paid"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Mark as Paid"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            android:backgroundTint="@color/dashboard_green" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dialog_view_details"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="View in Bills"
+            android:textColor="@color/dashboard_blue"
+            app:strokeColor="@color/dashboard_blue"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_dialog_close"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Close"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

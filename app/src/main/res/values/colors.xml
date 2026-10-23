@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Blue Colors -->
+    <color name="light_blue">#E3F2FD</color>
+    <color name="blue">#2196F3</color>
+    <color name="dark_blue">#1565C0</color>
+
+    <!-- Gray Colors -->
+    <color name="light_gray">#F5F5F5</color>
+    <color name="gray">#757575</color>
+    <color name="dark_gray">#424242</color>
+
+    <!-- Accent Colors -->
+    <color name="green">#00C853</color>
+    <color name="teal">#00BFA5</color>
+
+    <!-- Purple Colors -->
+    <color name="primary_color">#FF6200EE</color>
+    <color name="app_purple">#FF6200EE</color>
+    <color name="secondary_purple">#7B1FA2</color>
+    <color name="secondary_purple_light">#F3E5F5</color>
+
+    <!-- Jar Colors -->
+    <color name="jar_color_red">#D32F2F</color>
+    <color name="jar_color_orange">#FFA000</color>
+    <color name="jar_color_yellow">#FFC107</color>
+    <color name="jar_color_green">#4CAF50</color>
+    <color name="jar_color_purple">#7B1FA2</color>
+    <color name="jar_color_pink">#C2185B</color>
+
+    <!-- Dashboard Colors -->
+    <color name="dashboard_blue">#0D47A1</color>
+    <color name="dashboard_green">#1B5E20</color>
+    <color name="dashboard_red">#B71C1C</color>
+    <color name="red">#B71C1C</color>
+
+
+    <!-- Challenge Theme Colors -->
+    <color name="challenge_orange">#FF9800</color>
+    <color name="challenge_bg">#F8F9FE</color>
+    <color name="challenge_blue">#2196F3</color>
+    <color name="challenge_red">#F44336</color>
+    <color name="challenge_green">#4CAF50</color>
+    
+    <!-- Surface Colors (Semantic) -->
+    <color name="surface_summary_active">@color/light_blue</color>
+    <color name="surface_summary_saved">@color/secondary_purple_light</color>
+    <color name="surface_quick_start">@color/white</color>
+    <color name="surface_challenge_item">@color/white</color>
+    
+    <!-- Text Colors (Semantic) -->
+    <color name="text_summary_active">@color/blue</color>
+    <color name="text_summary_saved">@color/secondary_purple</color>
+
+    <!-- Settings Theme Colors -->
+    <color name="ocean_blue">#0077BE</color>
+    <color name="forest_green">#228B22</color>
+    <color name="royal_purple">#7851A9</color>
+    <color name="sunset_orange">#FD5E53</color>
+
+    <!-- Light Theme UI Colors -->
+    <color name="background_light">#F8F9FE</color>
+    <color name="text_primary">#1A1C1E</color>
+    <color name="text_secondary">#44474E</color>
+    <color name="separator_color">#CAC4D0</color>
+
+    <!-- Add these missing colors -->
+    <color name="ocean_blue_dark">#0F4C75</color>  <!-- Dark blue color -->
+    <color name="text_primary_light">#212121</color>  <!-- Dark gray for primary text in light mode -->
+    <color name="text_secondary_light">#757575</color>  <!-- Medium gray for secondary text in light mode -->
+    <color name="background_dark">#0F1115</color>
+    <color name="surface_dark">#1A1D24</color>
+    <color name="text_primary_dark">#F5F5F5</color>
+    <color name="text_secondary_dark">#9EA3AE</color>
+
+    <!-- Also add surface_light for consistency -->
+    <color name="surface_light">#FFFFFF</color>
+    <color name="page_background">#F5F5F5</color>
+    <color name="summary_due_bg">#E3F2FD</color>
+    <color name="summary_paid_bg">#FFEBEE</color>
+    <color name="category_bg">#F3E5F5</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="input_field_bg">#FFFFFF</color>
+    <color name="text_hint">#757575</color>
+    <color name="red_light">#FFEBEE</color>
+    <color name="red_dark">#D32F2F</color>
+    <color name="green_light">#E8F5E9</color>
+    <color name="green_dark">#2E7D32</color>
+    <color name="blue_light">#E3F2FD</color>
+    <color name="dashboard_orange">#FF9800</color>
+    <color name="purple_light">#F3E5F5</color>
+    <color name="orange_light">#FFF3E0</color>
+    <color name="transparent">#00000000</color>
+
+        <!-- Existing colors -->
+        <color name="purple_200">#FFBB86FC</color>
+        <color name="purple_500">#FF6200EE</color>
+        <color name="purple_700">#FF3700B3</color>
+        <color name="teal_200">#FF03DAC5</color>
+        <color name="teal_700">#FF018786</color>
+
+
+        <!-- Light theme colors -->
+        <color name="card_background_light">#FFFFFFFF</color>
+        <color name="dialog_background_light">#FFFFFFFF</color>
+        <color name="text_hint_light">#FF999999</color>
+        <color name="input_stroke_color">#FFE0E0E0</color>
+
+        <!-- Dark theme colors -->
+        <color name="card_background_dark">#FF2C2C2C</color>
+        <color name="dialog_background_dark">#FF1E1E1E</color>
+        <color name="text_hint_dark">#FF808080</color>
+        <color name="input_stroke_color_dark">#FF404040</color>
+
+    <!-- Theme color variations for different states -->
+    <color name="ocean_blue_light">#64B5F6</color>
+    <color name="forest_green_light">#81C784</color>
+    <color name="forest_green_dark">#388E3C</color>
+    <color name="royal_purple_light">#BA68C8</color>
+    <color name="royal_purple_dark">#7B1FA2</color>
+    <color name="sunset_orange_light">#FFB74D</color>
+    <color name="sunset_orange_dark">#F57C00</color>
+    <color name="warning_color">#F57C00</color>
+    <color name="warning_bg">#FFF3E0</color>
+
+
+</resources>

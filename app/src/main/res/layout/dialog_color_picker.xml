@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Custom Color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Color Preview -->
+    <View
+        android:id="@+id/preview_color_view"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="#FF0000"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:elevation="8dp"
+        android:outlineProvider="background"
+        android:clipToOutline="true"/>
+
+    <!-- Color Values Display -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hex"
+                android:textColor="@color/gray"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/hex_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#FF0000"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:background="@color/light_gray"
+            android:layout_marginHorizontal="16dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brightness"
+                android:textColor="@color/gray"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/percent_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100%"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Red Slider -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            android:textColor="#F44336"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"/>
+
+        <SeekBar
+            android:id="@+id/seekbar_red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="255"
+            android:progress="255"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:progressTint="#F44336"
+            android:thumbTint="#F44336"/>
+
+        <TextView
+            android:id="@+id/red_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="255"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Green Slider -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:textColor="#4CAF50"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"/>
+
+        <SeekBar
+            android:id="@+id/seekbar_green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="255"
+            android:progress="0"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:progressTint="#4CAF50"
+            android:thumbTint="#4CAF50"/>
+
+        <TextView
+            android:id="@+id/green_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Blue Slider -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            android:textColor="#2196F3"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"/>
+
+        <SeekBar
+            android:id="@+id/seekbar_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="255"
+            android:progress="0"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:progressTint="#2196F3"
+            android:thumbTint="#2196F3"/>
+
+        <TextView
+            android:id="@+id/blue_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Cancel"
+            android:backgroundTint="@color/light_gray"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:elevation="0dp"/>
+
+        <Button
+            android:id="@+id/btn_select_color"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Select"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:elevation="4dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/icon_card"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/blue_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/notification_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_notifications"
+            app:tint="@color/white" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/content_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toEndOf="@+id/icon_card"
+        app:layout_constraintEnd_toStartOf="@+id/time_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/notification_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jar Invitation"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+
+        <TextView
+            android:id="@+id/notification_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You've been invited to join a jar"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <LinearLayout
+            android:id="@+id/action_buttons_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_accept"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="@string/accept"
+                android:textSize="12sp"
+                android:textColor="@color/green"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_decline"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="@string/decline"
+                android:textSize="12sp"
+                android:textColor="@color/red"
+                android:insetTop="0dp"
+                android:insetBottom="0dp" />
+        </LinearLayout>
+
+        <!-- Mark as Read Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_mark_read"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Mark as read"
+            android:textSize="12sp"
+            android:textColor="@color/blue"
+            android:visibility="gone"
+            app:cornerRadius="16dp"
+            app:backgroundTint="@color/blue_light"
+            app:icon="@android:drawable/checkbox_on_background"
+            app:iconGravity="textStart"
+            app:iconTint="@color/blue"
+            app:iconPadding="4dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2m"
+        android:textSize="12sp"
+        android:textColor="@color/text_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/unread_indicator"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/blue"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

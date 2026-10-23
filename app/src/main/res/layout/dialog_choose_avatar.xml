@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/card_background"
+    android:elevation="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:gravity="center"
+        android:text="Choose Avatar"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <LinearLayout
+            android:id="@+id/avatar_grid_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/avatar1_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar2_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar3_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar3"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar4_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar4"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_4" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/avatar5_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar5"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar6_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar6"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar7_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar7"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_7" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar8_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar8"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_8" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Row 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/avatar9_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar9"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_9" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar10_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar10"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar11_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar11"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_11" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar12_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar12"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_12" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Row 4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/avatar13_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar13"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_13" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar14_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar14"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar15_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar15"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_15" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar16_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar16"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_16" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Row 5 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/avatar18_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar18"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_18" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar19_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar19"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_19" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/avatar20_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/bg_avatar_selector"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/avatar20"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/avatar_20" />
+                </LinearLayout>
+
+                <!-- Empty placeholder for alignment -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/light_gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnChooseGallery"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Choose from Gallery"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:backgroundTint="#FF9800"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/ic_image"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="@color/white" />
+
+</LinearLayout>

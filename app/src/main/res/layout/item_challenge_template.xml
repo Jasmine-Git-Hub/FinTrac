@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_challenge"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/light_gray"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_challenge_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No-Café Week"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/tv_challenge_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Skip coffee shop visits for 7 days"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+
+        <!-- Duration and Savings Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Duration -->
+            <TextView
+                android:id="@+id/tv_challenge_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_calendar"
+                android:text="7 days"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@color/light_gray" />
+
+            <!-- Savings -->
+            <TextView
+                android:id="@+id/tv_challenge_savings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/ic_savings"
+                android:text="Save ₱350"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

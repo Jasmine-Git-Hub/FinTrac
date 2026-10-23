@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Avatars are loaded by name via getIdentifier() from the "profileAvatar" Firestore field,
+     so resource shrinking must never remove them. -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/avatar_*" />

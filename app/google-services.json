@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "606379172372",
+    "firebase_url": "https://fintrac-b3f0d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "fintrac-b3f0d",
+    "storage_bucket": "fintrac-b3f0d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:606379172372:android:fca461ae913c8a83b73d01",
+        "android_client_info": {
+          "package_name": "com.example.fintrac"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "606379172372-085gtu0m1f93lpmnfps5mf4i0ol70qjq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fintrac",
+            "certificate_hash": "0fb7d912974b747cf90a86678bcf621fa47eaedf"
+          }
+        },
+        {
+          "client_id": "606379172372-odjd2qnfhiu7tjnlh2gll0qbl1pmjqac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2U9gMdBljQ3Ag21xr8nOPOcDnIRpMcKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "606379172372-odjd2qnfhiu7tjnlh2gll0qbl1pmjqac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
